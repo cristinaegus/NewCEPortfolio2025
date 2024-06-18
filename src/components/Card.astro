@@ -1,0 +1,59 @@
+---
+export type Props = {
+  to: string;
+  title: string;
+  gradientFrom: string;
+  gradientTo: string;
+};
+
+const { to, title, gradientFrom, gradientTo } = Astro.props;
+---
+
+<a href={to} class="card">
+  <div class="card-inner">
+    <div class="card-title">{title}</div>
+    <div class="card-footer">&rarr;</div>
+  </div>
+</a>
+<style
+  define:vars={{ gradientFrom: `${gradientFrom}`, gradientTo: `${gradientTo}` }}
+>
+  .card {
+    --radius: 10px;
+    background-image: linear-gradient(
+      to right,
+      var(--gradientFrom),
+      var(--gradientTo)
+    );
+    padding: 4px;
+    border-radius: var(--radius);
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .card:hover {
+    transform: scale(0.9);
+  }
+
+  .card-inner {
+    background: var(--background);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-footer {
+    margin: auto 0 0 auto;
+    padding-top: 2rem;
+    font-size: 1.2rem;
+    color: var(--grey-900);
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+    color: var(--grey-900);
+    font-weight: 500;
+    line-height: 1.75rem;
+  }
+</style>
