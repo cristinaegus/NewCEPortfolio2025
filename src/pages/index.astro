@@ -4,28 +4,31 @@ import Cards from '../components/Cards.astro';
 
 const blogs = await Astro.glob<{
   title: string;
-  poster:string;
-  subtitle:string;
-}>("../pages/blogs/*.md")
+  poster: string;
+  subtitle: string;
+}>('../pages/blogs/*.md');
 ---
 
 <Main title="Ibrahim Elkamali">
-  <div class="profile">
+  <div class="flex items-center flex-wrap py-8 md:space-x-8">
     <img
-      class="profile-picture"
-      width="100px"
-      height="100px"
+      class="object-cover rounded-full w-24 h-24 md:w-32 md:h-32"
       src="/images/cat.jpg"
       alt="Avatar"
     />
-    <div class="profile-details">
-      <h1>Ibrahim Elkamali </h1>
-      <h2>Your Astro Front-End Developer</h2>
-      <p>
+    <div class="flex-1 min-w-[300px]">
+      <h1 class="text-4xl font-bold text-gray-900 dark:text-gray-100">
+        Ibrahim Elkamali
+      </h1>
+      <h2 class="text-2xl text-gray-700 dark:text-gray-300 mt-2">
+        Your Astro Front-End Developer
+      </h2>
+      <p class="text-gray-600 dark:text-gray-400 mt-4">
         I'm here to help you build your fast and scalable web applications.
       </p>
     </div>
   </div>
+
   <div class="" transition:name="cards">
     <Cards
       cards={[
@@ -50,79 +53,28 @@ const blogs = await Astro.glob<{
       ]}
     />
   </div>
-  <div class="featured-blogs">
-    <h3 class="featured-blogs_title">Featured Blogs</h3>
-    <p class="featured-blogs_description">
-      Opinion piecies that will change everything you know
+
+  <div class="mt-12">
+    <h3 class="text-3xl text-gray-900 dark:text-gray-100 mb-4">
+      Featured Blogs
+    </h3>
+    <p class="text-gray-600 dark:text-gray-400 mb-8">
+      Opinion pieces that will change everything you know
     </p>
   </div>
 
-  <ol class="blogs">
-    {blogs.map((blog) => (
-      <li class="blog-list">
-        <a class="blog-link" href={blog.url}>{blog.frontmatter.title}</a>
-      </li>
-    ))}
+  <ol class="space-y-4">
+    {
+      blogs.map(blog => (
+        <li class="border-b border-gray-200 dark:border-gray-700">
+          <a
+            class="block py-4 text-gray-900 dark:text-gray-100 transition-opacity duration-200 ease-in-out hover:opacity-70"
+            href={blog.url}
+          >
+            {blog.frontmatter.title}
+          </a>
+        </li>
+      ))
+    }
   </ol>
-  
 </Main>
-
-<style>
-  .profile {
-    display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    padding: 1rem 0 3rem;
-  }
-
-  .profile-details {
-    flex: 1 0 300px;
-  }
-  .profile-details > h1 {
-    margin-top: 0;
-  }
-
-  .profile-picture {
-    object-fit: cover;
-    border-radius: 50%;
-    margin: 0 2rem 1rem 0;
-  }
-
-  .featured-blogs {
-    margin: 0;
-    padding: 3rem 0 0 0;
-  }
-
-  .featured-blogs_title {
-    font-size: 2rem;
-    color: var(--grey-900);
-  }
-
-  .featured-blogs_description {
-    margin-top: -1.2rem;
-  }
-
-  .blogs {
-    font-size: 1rem;
-    font-weight: 500;
-  }
-
-  .blog-list {
-    border-bottom: 1px solid;
-    border-color: var(--grey-200);
-  }
-
-  .blog-link {
-    opacity: 1;
-    height: 100%;
-    display: block;
-    padding: 1rem 0;
-    color: var(--gray-200);
-    text-decoration: none;
-    transition: opacity: .2s ease-in-out;;
-  }
-
-  .blog-link:hover {
-    opacity: .7;
-  }
-</style>

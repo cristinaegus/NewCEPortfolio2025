@@ -1,12 +1,16 @@
-<button aria-label="Theme toogler" data-theme-toggle>
+<button
+  aria-label="Theme toggler"
+  data-theme-toggle
+  class="cursor-pointer rounded-lg border-0 p-2 transition-transform duration-200 ease-in-out hover:scale-90 active:scale-100"
+>
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24"
     height="24"
     viewBox="0 0 24 24"
-    style="fill: rgba(0, 0, 0,
-    0.3);transform: ;msFilter:;"
-    ><path
+    class="fill-current text-gray-700 dark:text-gray-300"
+  >
+    <path
       class="sun"
       d="M6.995 12c0 2.761 2.246 5.007 5.007 5.007s5.007-2.246 5.007-5.007-2.246-5.007-5.007-5.007S6.995 9.239 6.995 12zM11 19h2v3h-2zm0-17h2v3h-2zm-9 9h3v2H2zm17 0h3v2h-3zM5.637 19.778l-1.414-1.414 2.121-2.121 1.414 1.414zM16.242 6.344l2.122-2.122 1.414 1.414-2.122 2.122zM6.344 7.759 4.223 5.637l1.415-1.414 2.12 2.122zm13.434 10.605-1.414 1.414-2.122-2.122 1.414-1.414z"
     ></path>
@@ -17,23 +21,36 @@
   </svg>
 </button>
 
+<script>
+  document.addEventListener('astro:page-load', () => {
+    const DARK_THEME_CLASS = 'dark';
+    const COLOUR_MODE = 'COLOUR_MODE';
+    const LIGHT_THEME = 'LIGHT';
+    const DARK_THEME = 'DARK';
+
+    const toggle = document.querySelector('[data-theme-toggle]');
+    const rootEl = document.documentElement;
+
+    toggle &&
+      toggle.addEventListener('click', () => {
+        rootEl.classList.toggle(DARK_THEME_CLASS);
+
+        const colourMode = rootEl.classList.contains(DARK_THEME_CLASS)
+          ? DARK_THEME
+          : LIGHT_THEME;
+
+        window.localStorage.setItem(COLOUR_MODE, colourMode);
+      });
+
+    // On load, check if a theme is stored in localStorage
+    const storedTheme = window.localStorage.getItem(COLOUR_MODE);
+    if (storedTheme === DARK_THEME) {
+      rootEl.classList.add(DARK_THEME_CLASS);
+    }
+  });
+</script>
+
 <style>
-  button {
-    cursor: pointer;
-    border-radius: 10px;
-    border: 0;
-    padding: 5px 10px;
-    transition: all 0.2s ease-in-out;
-  }
-
-  button:hover {
-    transform: scale(0.9);
-  }
-
-  button:active {
-    transform: scale(1);
-  }
-
   .sun {
     opacity: 0;
   }
@@ -46,24 +63,3 @@
     opacity: 0;
   }
 </style>
-<!-- 
-<script>
-  const DARK_THEME_CLASS = 'dark';
-  const COLOUR_MODE = 'COLOUR_MODE';
-  const LIGHT_THEME = 'LIGHT';
-  const DARK_THEME = 'DARK';
-
-  const toggle = document.querySelector('[data-theme-toggle]');
-  const rootEl = document.documentElement;
-
-  toggle &&
-    toggle.addEventListener('click', () => {
-      rootEl.classList.toggle(DARK_THEME_CLASS);
-
-      const colourMode = rootEl.classList.contains(DARK_THEME_CLASS)
-        ? DARK_THEME
-        : LIGHT_THEME;
-
-      window.localStorage.setItem(COLOUR_MODE, colourMode);
-    });
-</script> -->
