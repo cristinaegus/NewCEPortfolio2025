@@ -5,7 +5,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        'background-light': 'white',
+        'background-light': '#f8fafc',
         'background-dark': 'black',
         'grey-200-light': '#222222',
         'grey-200-dark': '#eaeaeaea',
@@ -15,6 +15,7 @@ export default {
         'grey-600-dark': '#ffffff',
         'grey-900-light': '#111111',
         'grey-900-dark': '#fafafa',
+        rose: '#e11d48',
       },
     },
   },
@@ -27,6 +28,7 @@ export default {
           '--grey-400': theme('colors.grey-400-light'),
           '--grey-600': theme('colors.grey-600-light'),
           '--grey-900': theme('colors.grey-900-light'),
+          '--clr-rose': theme('colors.rose'), // Add the rose color variable for light mode
         },
         '.dark': {
           '--background': theme('colors.background-dark'),
@@ -34,6 +36,7 @@ export default {
           '--grey-400': theme('colors.grey-400-dark'),
           '--grey-600': theme('colors.grey-600-dark'),
           '--grey-900': theme('colors.grey-900-dark'),
+          '--clr-rose': theme('colors.rose'), // Add the rose color variable for dark mode
         },
         body: {
           fontFamily: "'Inter', sans-serif",

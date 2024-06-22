@@ -42,7 +42,6 @@
         window.localStorage.setItem(COLOUR_MODE, colourMode);
       });
 
-    // On load, check if a theme is stored in localStorage
     const storedTheme = window.localStorage.getItem(COLOUR_MODE);
     if (storedTheme === DARK_THEME) {
       rootEl.classList.add(DARK_THEME_CLASS);

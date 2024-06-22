@@ -1,0 +1,22 @@
+---
+const { url, alt } = Astro.props;
+---
+
+<div class="relative draggable unselectable tech-card rounded-lg">
+  <img src={url} alt={alt} class="w-20 h-20" />
+</div>
+
+<style>
+  .unselectable {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+  }
+
+  .tech-card {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+</style>

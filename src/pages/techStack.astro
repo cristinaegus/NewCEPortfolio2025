@@ -1,6 +1,8 @@
 ---
 import Main from '../layouts/Main.astro';
 import Cards from '../components/Cards.astro';
+import TechCard from '../components/TechCard.astro';
+import { techCardsData } from '../data/data';
 ---
 
 <Main title="Tech Stack">
@@ -8,7 +10,7 @@ import Cards from '../components/Cards.astro';
     <Cards
       cards={[
         {
-          title: 'Tech Stack',
+          title: 'Technology I possess',
           gradientFrom: '#818cf8',
           gradientTo: '#d8b4fe',
           to: '/techStack',
@@ -28,4 +30,85 @@ import Cards from '../components/Cards.astro';
       ]}
     />
   </div>
+
+  <p class="mt-5 animated-text">
+    Here are the technologies I specialize in! This is just a glimpse of my
+    expertise. For a detailed overview, feel free to check out <a
+      href="#"
+      class="underline font-bold text-rose-custom uppercase underline-offset-4"
+      >my resume</a
+    > (in progress) or explore my <a
+      class="underline font-bold text-purple-600 uppercase underline-offset-4"
+      href="#">blog post</a
+    > about my Front-end development journey.
+    <br />
+    <br />
+    <span>
+      Once all the images are displayed, feel free to drag them around and have
+      some fun!
+    </span>
+  </p>
+
+  <div
+    class="grid-container justify-items-center relative grid grid-cols-4 grid-rows-3 p-4 border-2 border-gray-200 dark:border-gray-700 mt-8 rounded-3xl tech-cards"
+  >
+    {
+      techCardsData.map(techCard => (
+        <TechCard
+          class="tech-card draggable"
+          url={techCard.url}
+          alt={techCard.alt}
+        />
+      ))
+    }
+  </div>
 </Main>
+
+<style>
+  .grid-container {
+    width: 100%;
+    height: 500px;
+  }
+
+  .animated-text {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  .tech-card {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+</style>
+
+<script>
+  import { gsap } from 'gsap';
+  import { Draggable } from 'gsap/Draggable';
+
+  gsap.registerPlugin(Draggable);
+
+  document.addEventListener('astro:page-load', () => {
+    gsap.to('.animated-text', {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      ease: 'power2.out',
+    });
+
+    gsap.to('.tech-card', {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      stagger: 0.1,
+      ease: 'power2.out',
+      onComplete: () => {
+        Draggable.create('.draggable', {
+          type: 'x,y',
+          bounds: '.grid-container',
+          edgeResistance: 0.65,
+          inertia: true,
+        });
+      },
+    });
+  });
+</script>
