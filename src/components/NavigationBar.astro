@@ -2,61 +2,55 @@
 import ThemeToggler from '../components/ThemeToggler.astro';
 ---
 
-<nav>
-  <ul>
-    <li><a href="/">Home</a></li>
-    <li><a href="/techStack">Tech Stack</a></li>
-    <li><a href="/projects">Projects</a></li>
-    <li><a href="/hobbies">Hobbies</a></li>
-    <ThemeToggler />
+<nav class="flex py-4 px-4 justify-between items-center">
+  <ul class="flex flex-wrap p-0 m-0">
+    <li class="opacity-80 list-none text-[0.95rem]">
+      <a
+        href="/"
+        class="px-4 py-2 rounded-lg no-underline text-grey-400 hover:text-grey-900"
+        >Home</a
+      >
+    </li>
+    <li class="opacity-80 list-none text-[0.95rem]">
+      <a
+        href="/techStack"
+        class="px-4 py-2 rounded-lg no-underline text-grey-400 hover:text-grey-900"
+        >Tech Stack</a
+      >
+    </li>
+    <li class="opacity-80 list-none text-[0.95rem]">
+      <a
+        href="/projects"
+        class="px-4 py-2 rounded-lg no-underline text-grey-400 hover:text-grey-900"
+        >Projects</a
+      >
+    </li>
+    <li class="opacity-80 list-none text-[0.95rem]">
+      <a
+        href="/hobbies"
+        class="px-4 py-2 rounded-lg no-underline text-grey-400 hover:text-grey-900"
+        >Hobbies</a
+      >
+    </li>
   </ul>
+  <ThemeToggler />
 </nav>
-
-<style>
-  nav {
-    display: flex;
-    align-items: flex-start;
-    padding: 2rem 0;
-  }
-
-  ul {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0;
-    margin: 0 auto 0 0;
-  }
-  nav li {
-    opacity: 0.8;
-    list-style: none;
-    font-size: 0.95rem;
-  }
-
-  a {
-    padding: 0.5rem 1rem;
-    border-radius: 10px;
-    text-decoration: none;
-    color: var(--grey-400);
-  }
-
-  a:hover {
-    color: var(--grey-900);
-  }
-
-  a.active {
-    background-color: var(--grey-900);
-    color: var(--background);
-  }
-</style>
 
 <script>
   document.addEventListener('astro:page-load', () => {
+    console.log('DOMContentLoaded event fired');
     const { pathname } = window.location;
+    console.log('Current pathname:', pathname);
 
     const navLinks = document.querySelectorAll('nav a');
+    console.log('Nav links:', navLinks);
 
     navLinks.forEach(link => {
+      console.log('Checking link:', link.getAttribute('href'));
       if (link.getAttribute('href') === pathname) {
-        link.classList.add('active');
+        console.log('Match found:', link.getAttribute('href'));
+        link.style.backgroundColor = '#111827';
+        link.style.color = '#f8fafc';
       }
     });
   });
