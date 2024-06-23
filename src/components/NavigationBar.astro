@@ -1,69 +1,38 @@
 ---
 import ThemeToggler from '../components/ThemeToggler.astro';
+
+const links = [
+  { href: '/', label: 'Home' },
+  { href: '/techStack', label: 'Tech Stack' },
+  { href: '/projects', label: 'Projects' },
+  { href: '/hobbies', label: 'Hobbies' },
+];
+
+const { pathname } = Astro.url;
+const isActive = (href: string) =>
+  href === pathname || href === pathname.replace(/\/$/, '');
 ---
 
 <nav class="flex py-4 px-4 justify-between items-center">
   <ul class="flex flex-wrap p-0 m-0">
-    <li class="opacity-80 list-none text-[0.95rem]">
-      <a
-        href="/"
-        class="px-4 py-2 rounded-lg no-underline text-grey-400 hover:text-grey-900"
-        >Home</a
-      >
-    </li>
-    <li class="opacity-80 list-none text-[0.95rem]">
-      <a
-        href="/techStack"
-        class="px-4 py-2 rounded-lg no-underline text-grey-400 hover:text-grey-900"
-        >Tech Stack</a
-      >
-    </li>
-    <li class="opacity-80 list-none text-[0.95rem]">
-      <a
-        href="/projects"
-        class="px-4 py-2 rounded-lg no-underline text-grey-400 hover:text-grey-900"
-        >Projects</a
-      >
-    </li>
-    <li class="opacity-80 list-none text-[0.95rem]">
-      <a
-        href="/hobbies"
-        class="px-4 py-2 rounded-lg no-underline text-grey-400 hover:text-grey-900"
-        >Hobbies</a
-      >
-    </li>
+    {
+      links.map(({ href, label }) => (
+        <li class="opacity-80 list-none text-[0.95rem]">
+          <a
+            href={href}
+            class={[
+              isActive(href) ? 'active-link' : '',
+              'px-4 py-2 rounded-lg no-underline text-grey-400 hover:text-grey-900',
+            ].join(' ')}
+          >
+            {label}
+          </a>
+        </li>
+      ))
+    }
   </ul>
   <ThemeToggler />
 </nav>
-
-<script>
-  document.addEventListener('astro:page-load', () => {
-    console.log('astro:page-load event fired');
-    const { pathname } = window.location;
-    console.log('Current pathname:', pathname);
-
-    const navLinks = document.querySelectorAll('nav a');
-    console.log('Nav links:', navLinks);
-
-    navLinks.forEach(link => {
-      const anchor = link as HTMLAnchorElement;
-      const href = anchor.getAttribute('href');
-
-      if (href) {
-        const normalizePath = (path: string) =>
-          path.replace(/\/$/, '').toLowerCase();
-        const normalizedHref = normalizePath(href);
-        const normalizedPathname = normalizePath(pathname);
-
-        console.log('Checking link:', normalizedHref);
-        if (normalizedHref === normalizedPathname) {
-          console.log('Match found:', normalizedHref);
-          anchor.classList.add('active-link');
-        }
-      }
-    });
-  });
-</script>
 
 <style>
   .active-link {
