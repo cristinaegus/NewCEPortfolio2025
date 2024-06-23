@@ -48,7 +48,10 @@ import ThemeToggler from '../components/ThemeToggler.astro';
     navLinks.forEach(link => {
       const anchor = link as HTMLAnchorElement;
       console.log('Checking link:', anchor.getAttribute('href'));
-      if (anchor.getAttribute('href') === pathname) {
+      if (
+        anchor.getAttribute('href') === pathname ||
+        anchor.getAttribute('href') === pathname.replace(/\/$/, '')
+      ) {
         console.log('Match found:', anchor.getAttribute('href'));
         anchor.classList.add('active-link');
       }
