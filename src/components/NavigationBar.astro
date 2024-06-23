@@ -38,7 +38,7 @@ import ThemeToggler from '../components/ThemeToggler.astro';
 
 <script>
   document.addEventListener('astro:page-load', () => {
-    console.log('DOMContentLoaded event fired');
+    console.log('astro:page-load event fired');
     const { pathname } = window.location;
     console.log('Current pathname:', pathname);
 
@@ -47,14 +47,27 @@ import ThemeToggler from '../components/ThemeToggler.astro';
 
     navLinks.forEach(link => {
       const anchor = link as HTMLAnchorElement;
-      console.log('Checking link:', anchor.getAttribute('href'));
-      if (
-        anchor.getAttribute('href') === pathname ||
-        anchor.getAttribute('href') === pathname.replace(/\/$/, '')
-      ) {
-        console.log('Match found:', anchor.getAttribute('href'));
-        anchor.classList.add('active-link');
+      const href = anchor.getAttribute('href');
+
+      if (href) {
+        const normalizePath = (path: string) =>
+          path.replace(/\/$/, '').toLowerCase();
+        const normalizedHref = normalizePath(href);
+        const normalizedPathname = normalizePath(pathname);
+
+        console.log('Checking link:', normalizedHref);
+        if (normalizedHref === normalizedPathname) {
+          console.log('Match found:', normalizedHref);
+          anchor.classList.add('active-link');
+        }
       }
     });
   });
 </script>
+
+<style>
+  .active-link {
+    background-color: var(--grey-900);
+    color: var(--background);
+  }
+</style>
