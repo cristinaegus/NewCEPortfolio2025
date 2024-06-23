@@ -46,11 +46,11 @@ import ThemeToggler from '../components/ThemeToggler.astro';
     console.log('Nav links:', navLinks);
 
     navLinks.forEach(link => {
-      console.log('Checking link:', link.getAttribute('href'));
-      if (link.getAttribute('href') === pathname) {
-        console.log('Match found:', link.getAttribute('href'));
-        link.style.backgroundColor = '#111827';
-        link.style.color = '#f8fafc';
+      const anchor = link as HTMLAnchorElement;
+      console.log('Checking link:', anchor.getAttribute('href'));
+      if (anchor.getAttribute('href') === pathname) {
+        console.log('Match found:', anchor.getAttribute('href'));
+        anchor.classList.add('active-link');
       }
     });
   });

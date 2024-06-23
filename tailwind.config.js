@@ -8,9 +8,9 @@ export default {
         'background-light': '#f8fafc',
         'background-dark': 'black',
         'grey-200-light': '#222222',
-        'grey-200-dark': '#eaeaeaea',
+        'grey-200-dark': '#eaeaea',
         'grey-400-light': '#444444',
-        'grey-400-dark': '#acacacac',
+        'grey-400-dark': '#acacac',
         'grey-600-light': '#333333',
         'grey-600-dark': '#ffffff',
         'grey-900-light': '#111111',
@@ -65,6 +65,14 @@ export default {
         },
         li: {
           margin: '1rem 0',
+        },
+      });
+    },
+    function ({ addComponents, theme }) {
+      addComponents({
+        '.active-link': {
+          backgroundColor: theme('colors.grey-600-light'),
+          color: theme('colors.background-light'),
         },
       });
     },
