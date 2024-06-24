@@ -1,9 +1,10 @@
 ---
 import Main from '../layouts/Main.astro';
 import Cards from '../components/Cards.astro';
+import ProjectCard from '../components/ProjectCard.astro';
 ---
 
-<Main title="Tech Stack">
+<Main title="My Projects">
   <div class="" transition:name="cards">
     <Cards
       cards={[
@@ -28,4 +29,36 @@ import Cards from '../components/Cards.astro';
       ]}
     />
   </div>
+
+  <section class="text-center container mx-auto py-8">
+    <p>Here you can review my 3 highlights</p>
+    <br />
+    <p></p>
+    <div class="flex flex-col">
+      <ProjectCard
+        title="Engineering portfolio"
+        description="Simple Astro project with some magic!"
+        technologies={['Astro', 'Markdowns']}
+        href="https://test-astro-portoflio.netlify.app/"
+        imgSrc="/images/iphone_15.png"
+        imgAlt="Project"
+      />
+      <ProjectCard
+        title="Architecture website"
+        description="Multipage website with OOP"
+        technologies={['Vite', 'JS', 'React']}
+        href="https://architecture-digital.netlify.app/"
+        imgSrc="/images/nike.png"
+        imgAlt="Project"
+      />
+      <ProjectCard
+        title="Bankist minimalist"
+        description="Simple website with JS magic!"
+        technologies={['JS']}
+        href="https://ai-225-timetable.netlify.app/"
+        imgSrc="/images/poker.png"
+        imgAlt="Portfolio"
+      />
+    </div>
+  </section>
 </Main>

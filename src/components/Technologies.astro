@@ -1,0 +1,23 @@
+---
+interface Props {
+  technologies: string[];
+}
+
+const { technologies } = Astro.props as Props;
+
+const technologyStyles: Record<string, string> = {
+  React: 'text-blue-500',
+  Astro: 'text-orange-500',
+};
+---
+
+<p
+  class="text-xs sm:text-sm lg:text-base mb-4 text-gray-700 dark:text-gray-400"
+>
+  Technologies I used here:
+  {
+    technologies.map(tech => (
+      <span class={`${technologyStyles[tech] || ''} mx-1`}>{tech}</span>
+    ))
+  }
+</p>
