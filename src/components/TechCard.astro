@@ -1,9 +1,11 @@
 ---
 const { url, alt } = Astro.props;
+
+import { Image } from 'astro:assets';
 ---
 
 <div class="relative draggable unselectable tech-card rounded-lg">
-  <img src={url} alt={alt} class="w-20 h-20" />
+  <Image src={url} alt={alt} class="w-20 h-20" width={80} height={80} />
 </div>
 
 <style>

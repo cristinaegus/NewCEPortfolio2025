@@ -31,12 +31,16 @@ import { techCardsData } from '../data/data';
     />
   </div>
 
-  <!-- <iframe src="https://giphy.com/embed/BkIWP8ZiXzo3cR6oS0"></iframe> -->
+  <div id="resumeIframeContainer" class="hidden">
+    <iframe id="resumeIframe" src="https://giphy.com/embed/BkIWP8ZiXzo3cR6oS0"
+    ></iframe>
+  </div>
 
   <p class="mt-5 animated-text">
     Here are the technologies I specialize in! This is just a glimpse of my
     expertise. For a detailed overview, feel free to check out <a
       href="#"
+      id="resumeLink"
       class="underline font-bold text-rose-custom uppercase underline-offset-4"
       >my resume</a
     > (in progress) or explore my <a
@@ -81,6 +85,17 @@ import { techCardsData } from '../data/data';
     opacity: 0;
     transform: translateY(20px);
   }
+
+  #resumeIframeContainer {
+    position: absolute;
+    pointer-events: none; /* Ignore mouse events */
+    z-index: 1000;
+  }
+
+  #resumeIframe {
+    width: 400px;
+    height: 300px;
+  }
 </style>
 
 <script>
@@ -112,5 +127,36 @@ import { techCardsData } from '../data/data';
         });
       },
     });
+
+    const resumeLink = document.getElementById(
+      'resumeLink'
+    ) as HTMLAnchorElement;
+    const resumeIframeContainer = document.getElementById(
+      'resumeIframeContainer'
+    ) as HTMLDivElement;
+
+    resumeLink.addEventListener('mouseenter', (event: MouseEvent) => {
+      resumeIframeContainer.classList.remove('hidden');
+      positionIframe(event);
+    });
+
+    resumeLink.addEventListener('mousemove', (event: MouseEvent) => {
+      positionIframe(event);
+    });
+
+    resumeLink.addEventListener('mouseleave', () => {
+      resumeIframeContainer.classList.add('hidden');
+    });
+
+    function positionIframe(event: MouseEvent) {
+      const iframeWidth = 400;
+      const iframeHeight = 300;
+      const offset = 10;
+      const x = event.clientX + offset;
+      const y = event.clientY + offset;
+
+      resumeIframeContainer.style.left = `${x}px`;
+      resumeIframeContainer.style.top = `${y}px`;
+    }
   });
 </script>
