@@ -10,7 +10,7 @@ export default {
         'grey-200-light': '#222222',
         'grey-200-dark': '#eaeaea',
         'grey-400-light': '#444444',
-        'grey-400-dark': '#acacac',
+        'grey-400-dark': '#acacac', // Reverted to original color
         'grey-600-light': '#333333',
         'grey-600-dark': '#ffffff',
         'grey-900-light': '#111111',
@@ -33,7 +33,7 @@ export default {
         '.dark': {
           '--background': theme('colors.background-dark'),
           '--grey-200': theme('colors.grey-200-dark'),
-          '--grey-400': theme('colors.grey-400-dark'),
+          '--grey-400': theme('colors.grey-400-dark'), // Reverted to original color
           '--grey-600': theme('colors.grey-600-dark'),
           '--grey-900': theme('colors.grey-900-dark'),
           '--clr-rose': theme('colors.rose'), // Add the rose color variable for dark mode
