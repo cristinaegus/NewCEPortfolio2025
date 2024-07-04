@@ -3,13 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-  body {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    backface-visibility: hidden;
-    transform: translateZ(0);
-  }
-
   body::-webkit-scrollbar {
     width: 4px;
   }
@@ -23,8 +16,18 @@
     outline: 1px solid var(--clr-rose);
   }
 
+  /* Font rendering optimizations */
+  body,
   p,
-  li {
+  li,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     backface-visibility: hidden;
     transform: translateZ(0);
   }
