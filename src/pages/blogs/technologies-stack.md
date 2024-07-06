@@ -2,7 +2,7 @@
 layout: ../../layouts/Blog.astro
 title: 'Checkout all my technologies stack'
 subtitle: 'Front-End Web Development'
-poster: '/images/code.jpg'
+poster: '/images/roadmap.jpg'
 ---
 
 # Technologies and Libraries I’ve Worked With
