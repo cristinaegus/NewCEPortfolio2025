@@ -1,50 +1,46 @@
 ---
 layout: ../../layouts/Blog.astro
-title: 'Checkout all my technologies'
+title: 'Checkout all my technologies stack'
 subtitle: 'Front-End Web Development'
 poster: '/images/code.jpg'
 ---
 
 # Technologies and Libraries I’ve Worked With
 
-In my journey as a front-end developer, I've had the opportunity to work with a variety of technologies, libraries, and tools. Here's a detailed look at the ones I find most impactful:
+Here's a quick overview of the key technologies, libraries, and tools that form the core of my front-end development toolkit:
 
 ## 1. **Astro**
 
-Astro is a modern static site builder that offers a unique approach to front-end development. With Astro, I can create fast, optimized websites using modern frameworks like React and Svelte. Its emphasis on performance and developer experience makes it a favorite in my toolkit.
+Astro is a modern static site builder that emphasizes performance and developer experience. It allows me to create fast, optimized websites using frameworks like React and Svelte.
 
 ## 2. **React**
 
-React is a powerful JavaScript library for building user interfaces. I have extensive experience creating dynamic and responsive web applications using React. Its component-based architecture allows for modular and maintainable code.
+React is a powerful library for building dynamic and responsive user interfaces. Its component-based architecture promotes modular and maintainable code.
 
 ## 3. **JavaScript & TypeScript**
 
-JavaScript is the backbone of web development, and I use it extensively to create interactive elements on web pages. Additionally, TypeScript adds type safety to my JavaScript code, making it easier to catch errors early and maintain large codebases.
+JavaScript powers interactive web elements, while TypeScript adds type safety, helping catch errors early and manage large codebases effectively.
 
 ## 4. **Three.js**
 
-Three.js is a JavaScript library used to create and display animated 3D graphics in the browser. It enables me to add interactive 3D elements to my projects, enhancing the user experience with visually stunning graphics.
+Three.js is used for creating animated 3D graphics in the browser, enhancing user experience with visually stunning elements.
 
-## 5. **GSAP (GreenSock Animation Platform)**
+## 5. **GSAP**
 
-GSAP is a robust JavaScript library for creating high-performance animations. I use GSAP to bring my projects to life with smooth, professional-grade animations.
+GSAP is a robust library for high-performance animations, bringing projects to life with smooth, professional-grade animations.
 
 ## 6. **Core-js**
 
-Core-js is a modular standard library for JavaScript that includes polyfills for ECMAScript features. It helps ensure my code is compatible with various environments and browsers.
+Core-js provides polyfills for ECMAScript features, ensuring code compatibility across different environments and browsers.
 
 ## 7. **Vite, Parcel & Webpack**
 
-These are tools for bundling and building JavaScript applications. Vite offers a fast and modern development experience with its lightning-fast hot module replacement. Parcel provides a zero-configuration build tool, simplifying the development process. Webpack is highly configurable and suited for large projects, offering comprehensive features for module bundling.
+These are tools for bundling and building JavaScript applications, each offering unique advantages like fast development experiences, zero-configuration builds, and comprehensive module bundling.
 
 ## 8. **PostCSS, Sass, SCSS & Less**
 
-These are CSS preprocessors and tools that extend the capabilities of CSS with variables, nesting, and mixins. PostCSS allows me to use modern CSS features and maintain compatibility with older browsers. Sass, SCSS, and Less help me write cleaner and more maintainable stylesheets.
+These CSS preprocessors and tools extend CSS capabilities with variables, nesting, and mixins, allowing for cleaner and more maintainable stylesheets.
 
 ## 9. **Basic Knowledge of PHP and C**
 
-In addition to my front-end expertise, I have basic knowledge of PHP and C. PHP is a widely-used server-side scripting language that is especially suited for web development. C is a powerful general-purpose programming language that provides a strong foundation for understanding computer science concepts and developing performance-critical applications.
-
-## Conclusion
-
-The technologies and libraries I've listed here form the core of my front-end development toolkit. Each has its strengths and use cases, and together they enable me to build robust, scalable, and visually appealing web applications. As the web development landscape continues to evolve, I remain committed to learning and adopting new tools and technologies to stay at the forefront of the industry.
+In addition to front-end expertise, I have basic knowledge of PHP for server-side scripting and C for foundational programming concepts and performance-critical applications.

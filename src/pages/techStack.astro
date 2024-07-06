@@ -6,7 +6,7 @@ import { techCardsData } from '../data/data';
 ---
 
 <Main title="Tech Stack">
-  <div class="" transition:name="cards">
+  <div transition:name="cards">
     <Cards
       cards={[
         {
@@ -31,6 +31,11 @@ import { techCardsData } from '../data/data';
     />
   </div>
 
+  <div id="blogPostIframeContainer" class="hidden">
+    <iframe id="blogPostIframe" src="https://giphy.com/embed/kjDQ00nkmCrCezmje0"
+    ></iframe>
+  </div>
+
   <div id="resumeIframeContainer" class="hidden">
     <iframe id="resumeIframe" src="https://giphy.com/embed/BkIWP8ZiXzo3cR6oS0"
     ></iframe>
@@ -45,8 +50,10 @@ import { techCardsData } from '../data/data';
       >my resume</a
     > (in progress) or explore my <a
       class="underline font-bold text-purple-600 uppercase underline-offset-4"
-      href="#">blog post</a
-    > about my Front-end development journey.
+      href="/blogs/technologies-stack"
+      id="blogPostLink">blog post</a
+    >
+    about my Front-end development journey.
     <br />
     <br />
     <span>
@@ -86,13 +93,15 @@ import { techCardsData } from '../data/data';
     transform: translateY(20px);
   }
 
-  #resumeIframeContainer {
+  #resumeIframeContainer,
+  #blogPostIframeContainer {
     position: absolute;
     pointer-events: none; /* Ignore mouse events */
     z-index: 1000;
   }
 
-  #resumeIframe {
+  #resumeIframe,
+  #blogPostIframe {
     width: 400px;
     height: 300px;
   }
@@ -101,7 +110,6 @@ import { techCardsData } from '../data/data';
 <script>
   import { gsap } from 'gsap';
   import { Draggable } from 'gsap/Draggable';
-
   gsap.registerPlugin(Draggable);
 
   document.addEventListener('astro:page-load', () => {
@@ -127,34 +135,34 @@ import { techCardsData } from '../data/data';
         });
       },
     });
+    setupIframeHover('resumeLink', 'resumeIframeContainer');
+    setupIframeHover('blogPostLink', 'blogPostIframeContainer');
 
-    const resumeLink = document.getElementById(
-      'resumeLink'
-    ) as HTMLAnchorElement;
-    const resumeIframeContainer = document.getElementById(
-      'resumeIframeContainer'
-    ) as HTMLDivElement;
+    function setupIframeHover(linkId: string, containerId: string) {
+      const link = document.getElementById(linkId) as HTMLAnchorElement;
+      const container = document.getElementById(containerId) as HTMLDivElement;
 
-    resumeLink.addEventListener('mouseenter', (event: MouseEvent) => {
-      resumeIframeContainer.classList.remove('hidden');
-      positionIframe(event);
-    });
+      link.addEventListener('mouseenter', (event: MouseEvent) => {
+        container.classList.remove('hidden');
+        positionIframe(event, container);
+      });
 
-    resumeLink.addEventListener('mousemove', (event: MouseEvent) => {
-      positionIframe(event);
-    });
+      link.addEventListener('mousemove', (event: MouseEvent) => {
+        positionIframe(event, container);
+      });
 
-    resumeLink.addEventListener('mouseleave', () => {
-      resumeIframeContainer.classList.add('hidden');
-    });
+      link.addEventListener('mouseleave', () => {
+        container.classList.add('hidden');
+      });
+    }
 
-    function positionIframe(event: MouseEvent) {
+    function positionIframe(event: MouseEvent, container: HTMLDivElement) {
       const offset = 10;
       const x = event.clientX + offset;
       const y = event.clientY + offset;
 
-      resumeIframeContainer.style.left = `${x}px`;
-      resumeIframeContainer.style.top = `${y}px`;
+      container.style.left = `${x}px`;
+      container.style.top = `${y}px`;
     }
   });
 </script>
