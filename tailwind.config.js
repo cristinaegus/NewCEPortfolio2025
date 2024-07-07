@@ -6,7 +6,7 @@ export default {
     extend: {
       colors: {
         'background-light': '#f8fafc',
-        'background-dark': '#27272a',
+        'background-dark': '#18181b',
         'grey-200-light': '#222222',
         'grey-200-dark': '#eaeaea',
         'grey-400-light': '#444444',
