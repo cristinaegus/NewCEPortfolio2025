@@ -42,7 +42,7 @@ const FormComponent = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="p-8 rounded-lg shadow-lg max-w-md mx-auto"
+      className="p-4 sm:p-8 rounded-lg shadow-lg max-w-md mx-auto"
       name="contact"
       method="POST"
       data-netlify="true"
@@ -50,7 +50,9 @@ const FormComponent = () => {
       netlify
     >
       <input type="hidden" name="form-name" value="contact" />
-      <h2 className="text-2xl text-white mb-6 text-center">Contact Me</h2>
+      <h2 className="text-xl sm:text-2xl text-white mb-6 text-center">
+        Contact Me
+      </h2>
       <div className="mb-4">
         <label htmlFor="name" className="block text-gray-300 mb-2">
           Name
@@ -61,7 +63,7 @@ const FormComponent = () => {
           name="name"
           value={formData.name}
           onChange={handleChange}
-          className="w-full p-3 border border-gray-700 rounded bg-transparent text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-600"
+          className="w-full p-2 sm:p-3 border border-gray-700 rounded bg-transparent text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-600"
           placeholder="Enter your full name"
           aria-describedby="name-error"
           required
@@ -82,7 +84,7 @@ const FormComponent = () => {
           name="email"
           value={formData.email}
           onChange={handleChange}
-          className="w-full p-3 border border-gray-700 rounded bg-transparent text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-600"
+          className="w-full p-2 sm:p-3 border border-gray-700 rounded bg-transparent text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-600"
           placeholder="Enter your email address"
           aria-describedby="email-error"
           required
@@ -102,7 +104,7 @@ const FormComponent = () => {
           name="message"
           value={formData.message}
           onChange={handleChange}
-          className="w-full p-3 border border-gray-700 rounded bg-transparent text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-600"
+          className="w-full p-2 sm:p-3 border border-gray-700 rounded bg-transparent text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-600"
           placeholder="Enter your message"
           aria-describedby="message-error"
           required
@@ -121,7 +123,7 @@ const FormComponent = () => {
       )}
       <button
         type="submit"
-        className="w-full bg-blue-600 text-white py-3 rounded hover:bg-blue-700 transition-colors duration-200"
+        className="w-full bg-blue-600 text-white py-2 sm:py-3 rounded hover:bg-blue-700 transition-colors duration-200"
         disabled={loading}
       >
         {loading ? 'Sending...' : 'Send Message'}
