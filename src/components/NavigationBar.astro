@@ -1,7 +1,10 @@
 ---
 // import ThemeToggler from '../components/ThemeToggler.astro';
 
-const links = [{ href: '/', label: 'Home' }];
+const links = [
+  { href: '/', label: 'Home' },
+  { href: '/contactMe', label: 'Contact Me' },
+];
 
 const { pathname } = Astro.url;
 const isActive = (href: string) =>

@@ -21,9 +21,9 @@ Once you have a handle on the basics, the next step is to enhance your CSS skill
 
 Adding a new dimension to web development, Three.js is a JavaScript library that enables the creation of 3D graphics in the browser. It's perfect for those looking to enhance their projects with interactive 3D elements. Learning Three.js opens up a world of possibilities and can make your web applications stand out.
 
-## Astro and Svelte: The Modern Static Site Builders
+## Astro
 
-Astro and Svelte are exciting new frameworks that emphasize performance and simplicity. Astro allows you to build fast, optimized static sites using modern front-end frameworks, while Svelte shifts much of the work to compile time, resulting in highly efficient runtime performance. These frameworks are a joy to work with and are excellent choices for building reactive user interfaces.
+Astro are exciting new frameworks that emphasize performance and simplicity. Astro allows you to build fast, optimized static sites using modern front-end frameworks. This framework are a joy to work with and are excellent choices for building reactive user interfaces.
 
 ## React: The Workhorse of Front-End Development
 

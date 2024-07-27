@@ -13,8 +13,8 @@ const blogs = await Astro.glob<{
 <Main title="Ibrahim Elkamali">
   <div class="flex items-center flex-wrap pb-8 md:space-x-8 animate">
     <Image
-      class="object-cover rounded-full w-[124px] h-[124px] max-md:w-24 max-md:h-24"
-      src="/images/avatar.avif"
+      class="object-cover rounded-full w-[124px] mb-10 h-[124px] max-md:w-24 max-md:h-24"
+      src="/images/avatar.png"
       alt="Avatar"
       width={124}
       height={124}
@@ -32,8 +32,9 @@ const blogs = await Astro.glob<{
       >
         Your Astro Front-End Developer
       </h2>
+
       <p
-        class="text-sm sm:text-base text-gray-600 dark:text-gray-400 mt-4 ml-4 text-wrap"
+        class="text-sm sm:text-base text-gray-600 dark:text-gray-400 mt-2 ml-4 pb-8 text-wrap"
       >
         I'm here to help you build your fast and scalable web applications.
       </p>
@@ -64,6 +65,16 @@ const blogs = await Astro.glob<{
       ]}
     />
   </div>
+
+  <!-- <div class="mt-10 animate">
+    <a
+      href="/aboutMe"
+      class="bg-gradient-to-r from-orange-400 to-red-600 bg-clip-text text-transparent font-bold uppercase pointer"
+    >
+      Contact me!
+    </a>
+  </div> -->
+
   <div class="mt-12 animate">
     <h3 class="text-3xl text-gray-900 dark:text-gray-100 mb-4">
       Featured Blogs
