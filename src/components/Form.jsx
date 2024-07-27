@@ -47,6 +47,7 @@ const FormComponent = () => {
       method="POST"
       data-netlify="true"
       data-netlify-recaptcha="true"
+      netlify
     >
       <input type="hidden" name="form-name" value="contact" />
       <h2 className="text-2xl text-white mb-6 text-center">Contact Me</h2>
@@ -60,7 +61,7 @@ const FormComponent = () => {
           name="name"
           value={formData.name}
           onChange={handleChange}
-          className="w-full p-3 border border-gray-700 rounded bg-transparent text-white placeholder-gray-500 f focus:outline-none focus:ring-2 focus:ring-blue-600"
+          className="w-full p-3 border border-gray-700 rounded bg-transparent text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-600"
           placeholder="Enter your full name"
           aria-describedby="name-error"
           required
@@ -81,7 +82,7 @@ const FormComponent = () => {
           name="email"
           value={formData.email}
           onChange={handleChange}
-          className="w-full p-3 border border-gray-700 rounded bg-transparent text-white placeholder-gray-500 f focus:outline-none focus:ring-2 focus:ring-blue-600"
+          className="w-full p-3 border border-gray-700 rounded bg-transparent text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-600"
           placeholder="Enter your email address"
           aria-describedby="email-error"
           required
@@ -101,7 +102,7 @@ const FormComponent = () => {
           name="message"
           value={formData.message}
           onChange={handleChange}
-          className="w-full p-3 border border-gray-700 rounded bg-transparent text-white placeholder-gray-500 f focus:outline-none focus:ring-2 focus:ring-blue-600"
+          className="w-full p-3 border border-gray-700 rounded bg-transparent text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-600"
           placeholder="Enter your message"
           aria-describedby="message-error"
           required
