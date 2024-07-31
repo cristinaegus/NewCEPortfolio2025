@@ -1,6 +1,36 @@
 ---
 import Main from '../layouts/Main.astro';
 import Cards from '../components/Cards.astro';
+import { CardStack } from '../components/CardsStack.tsx';
+
+const cardItems = [
+  {
+    id: 1,
+    name: '5 / 5 ⭐',
+    designation: 'Upwork',
+    content:
+      ' "Very good work - thank you. Very patient with trying to get the best end result." ',
+    gradientFrom: '#818cf8', // Start color of the gradient
+    gradientTo: '#d8b4fe', // End color of the gradient
+  },
+  {
+    id: 2,
+    name: '5 / 5 ⭐',
+    designation: 'Upwork',
+    content: ' "Solid freelancer. Would recommend." ',
+    gradientFrom: '#fde68a', // Start color of the gradient
+    gradientTo: '#fca5a5', // End color of the gradient
+  },
+  {
+    id: 3,
+    name: '5 / 5 ⭐',
+    designation: 'Upwork',
+    content:
+      '"I had the pleasure of working with Ibrahim on an Astro-based web development project, and I am thoroughly impressed with his skills, professionalism, and dedication."',
+    gradientFrom: '#6ee7b7', // Start color of the gradient
+    gradientTo: '#9333ea', // End color of the gradient
+  },
+];
 ---
 
 <Main title="About Me">
@@ -32,17 +62,17 @@ import Cards from '../components/Cards.astro';
     <p class="text-lg max-md:text-md mt-4">
       I'm Ibrahim Elkamali, a <span class="text-rose-custom font-bold"
         >Front-End Web Developer</span
-      >
-      from Odesa, Ukraine. I'm a 19-year-old student at Odesa Polytechnic National
+      > from Odesa, Ukraine. I'm a 19-year-old student at Odesa Polytechnic National
       University, currently pursuing a degree in computer science. Since 2021, I
       have been on a journey of self-learning programming.<br />
       I'm available for all kinds of work you might need. <span
         class="bg-gradient-to-r from-orange-400 to-red-600 bg-clip-text text-transparent font-bold"
+        >Feel free to contact me!</span
       >
-        Feel free to contact me!
-      </span>
     </p>
   </div>
+
+  <CardStack items={cardItems} client:load />
 </Main>
 
 <script>
