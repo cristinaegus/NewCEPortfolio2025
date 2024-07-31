@@ -3,6 +3,16 @@ export default {
   darkMode: 'class', // Enable dark mode with class strategy
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
+    letterSpacing: {
+      tightest: '-.075em',
+      tighter: '-.05em',
+      tight: '-.025em',
+      normal: '0',
+      wide: '.025em',
+      wider: '.05em',
+      widest: '.1em',
+      widest: '.25em',
+    },
     extend: {
       colors: {
         'background-light': '#f8fafc',
