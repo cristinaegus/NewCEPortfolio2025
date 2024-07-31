@@ -50,7 +50,7 @@ export const CardStack = ({
               className="absolute h-60 w-60 md:h-60 md:w-96 rounded-lg p-4 shadow-xl flex flex-col justify-between bg-white dark:bg-[#18181b] border-2 border-gray-300 dark:border-gray-600"
               style={{
                 transformOrigin: 'top center',
-                backgroundImage: 'url(../../public/images/back.png)',
+                backgroundImage: 'url(/images/back.png)',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
               }}
