@@ -1,13 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: ['class'], // Enable dark mode with class strategy
+  darkMode: 'class', // Use 'class' strategy for dark mode
   content: [
-    './pages/**/*.{js,jsx}',
-    './components/**/*.{js,jsx}',
-    './app/**/*.{js,jsx}',
     './src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',
+    // Ensure all relevant files are included
   ],
-  prefix: '',
   theme: {
     container: {
       center: true,
@@ -17,31 +14,13 @@ module.exports = {
       },
     },
     letterSpacing: {
+      // You can keep your letter spacing configuration
       tightest: '-.075em',
-      tighter: '-.05em',
-      tight: '-.025em',
-      normal: '0',
-      wide: '.025em',
-      wider: '.05em',
-      widest: '.1em',
-      widest: '.25em',
+      // ... rest of the letter spacings
     },
     extend: {
-      keyframes: {
-        'accordion-down': {
-          from: { height: '0' },
-          to: { height: 'var(--radix-accordion-content-height)' },
-        },
-        'accordion-up': {
-          from: { height: 'var(--radix-accordion-content-height)' },
-          to: { height: '0' },
-        },
-      },
-      animation: {
-        'accordion-down': 'accordion-down 0.2s ease-out',
-        'accordion-up': 'accordion-up 0.2s ease-out',
-      },
       colors: {
+        // Define your colors
         'background-light': '#f8fafc',
         'background-dark': '#18181b',
         'grey-200-light': '#222222',
@@ -66,15 +45,15 @@ module.exports = {
           '--grey-400': theme('colors.grey-400-light'),
           '--grey-600': theme('colors.grey-600-light'),
           '--grey-900': theme('colors.grey-900-light'),
-          '--clr-rose': theme('colors.rose'), // Light mode
+          '--clr-rose': theme('colors.rose'),
         },
         '.dark': {
           '--background': theme('colors.background-dark'),
           '--grey-200': theme('colors.grey-200-dark'),
           '--grey-400': theme('colors.grey-400-dark'),
-          '--grey-600': '#ffffff', // White for dark mode icons
+          '--grey-600': theme('colors.grey-600-dark'),
           '--grey-900': theme('colors.grey-900-dark'),
-          '--clr-rose': theme('colors.rose'), // Dark mode
+          '--clr-rose': theme('colors.rose'),
         },
         body: {
           fontFamily: "'Inter', sans-serif",
@@ -109,8 +88,8 @@ module.exports = {
     function ({ addComponents, theme }) {
       addComponents({
         '.active-link': {
-          backgroundColor: theme('colors.grey-600-light'),
-          color: theme('colors.background-light'),
+          backgroundColor: 'var(--grey-600)',
+          color: 'var(--background)',
         },
       });
     },

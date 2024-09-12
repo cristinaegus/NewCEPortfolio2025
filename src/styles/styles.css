@@ -35,4 +35,22 @@
   .text-rose-custom {
     color: var(--clr-rose);
   }
+
+  .sun {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .moon {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+
+  :global(html.dark) .sun {
+    opacity: 1;
+  }
+
+  :global(html.dark) .moon {
+    opacity: 0;
+  }
 }
