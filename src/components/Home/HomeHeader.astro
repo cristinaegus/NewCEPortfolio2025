@@ -1,0 +1,31 @@
+---
+import { Image } from 'astro:assets';
+---
+
+<div class="flex items-center flex-wrap pb-8 md:space-x-8 animate">
+  <Image
+    class="object-cover rounded-full w-[124px] mb-10 h-[124px] max-md:w-24 max-md:h-24"
+    src="/images/avatar.png"
+    alt="Avatar"
+    width={124}
+    height={124}
+    loading="eager"
+  />
+
+  <div class="flex-1 min-w-[300px] md:ml-4 max-[410px]:mt-4">
+    <h1
+      class="text-2xl sm:text-4xl font-bold text-gray-900 dark:text-gray-100 ml-4"
+    >
+      Ibrahim Elkamali
+    </h1>
+    <h2 class="text-xl sm:text-2xl text-gray-700 dark:text-gray-300 mt-2 ml-4">
+      Your Astro Front-End Developer
+    </h2>
+
+    <p
+      class="text-sm sm:text-base text-gray-600 dark:text-gray-400 mt-2 ml-4 pb-8 text-wrap"
+    >
+      I'm here to help you build your fast and scalable web applications.
+    </p>
+  </div>
+</div>

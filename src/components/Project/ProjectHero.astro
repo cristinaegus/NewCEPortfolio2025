@@ -1,0 +1,30 @@
+---
+import ProjectCards from './ProjectCards.astro';
+---
+
+<section class="text-center container mx-auto py-8 animate">
+  <p>
+    Discover my top three highlighted projects, each showcasing different
+    technologies.
+  </p>
+  <p class="text-nowrap max-sm:text-wrap">
+    <br />
+    This portfolio is built with
+    <span class="font-bold uppercase text-orange-500 floating-span">Astro</span>
+    <span class="font-bold uppercase text-cyan-500 floating-span">Tailwind</span
+    >
+    <span class="font-bold uppercase text-blue-600 floating-span"
+      >Typescript</span
+    >
+    <span class="font-bold uppercase text-green-600 floating-span">GSAP</span>
+    <span class="font-bold uppercase text-blue-400 floating-span">React</span>
+  </p>
+  <br />
+  <ProjectCards />
+</section>
+
+<style>
+  .floating-span {
+    display: inline-block;
+  }
+</style>

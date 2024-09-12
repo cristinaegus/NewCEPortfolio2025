@@ -1,8 +1,21 @@
 /** @type {import('tailwindcss').Config} */
-export default {
-  darkMode: 'class', // Enable dark mode with class strategy
-  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+module.exports = {
+  darkMode: ['class'], // Enable dark mode with class strategy
+  content: [
+    './pages/**/*.{js,jsx}',
+    './components/**/*.{js,jsx}',
+    './app/**/*.{js,jsx}',
+    './src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',
+  ],
+  prefix: '',
   theme: {
+    container: {
+      center: true,
+      padding: '2rem',
+      screens: {
+        '2xl': '1400px',
+      },
+    },
     letterSpacing: {
       tightest: '-.075em',
       tighter: '-.05em',
@@ -14,6 +27,20 @@ export default {
       widest: '.25em',
     },
     extend: {
+      keyframes: {
+        'accordion-down': {
+          from: { height: '0' },
+          to: { height: 'var(--radix-accordion-content-height)' },
+        },
+        'accordion-up': {
+          from: { height: 'var(--radix-accordion-content-height)' },
+          to: { height: '0' },
+        },
+      },
+      animation: {
+        'accordion-down': 'accordion-down 0.2s ease-out',
+        'accordion-up': 'accordion-up 0.2s ease-out',
+      },
       colors: {
         'background-light': '#f8fafc',
         'background-dark': '#18181b',
@@ -30,6 +57,7 @@ export default {
     },
   },
   plugins: [
+    require('tailwindcss-animate'),
     function ({ addBase, theme }) {
       addBase({
         ':root': {
@@ -38,15 +66,15 @@ export default {
           '--grey-400': theme('colors.grey-400-light'),
           '--grey-600': theme('colors.grey-600-light'),
           '--grey-900': theme('colors.grey-900-light'),
-          '--clr-rose': theme('colors.rose'), // Add the rose color variable for light mode
+          '--clr-rose': theme('colors.rose'), // Light mode
         },
         '.dark': {
           '--background': theme('colors.background-dark'),
           '--grey-200': theme('colors.grey-200-dark'),
           '--grey-400': theme('colors.grey-400-dark'),
-          '--grey-600': theme('colors.grey-600-dark'),
+          '--grey-600': '#ffffff', // White for dark mode icons
           '--grey-900': theme('colors.grey-900-dark'),
-          '--clr-rose': theme('colors.rose'), // Add the rose color variable for dark mode
+          '--clr-rose': theme('colors.rose'), // Dark mode
         },
         body: {
           fontFamily: "'Inter', sans-serif",
