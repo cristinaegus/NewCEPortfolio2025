@@ -1,5 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, memo } from 'react';
 import IconCloud from '../../../@/components/magicui/icon-cloud';
+
+const MemoizedIconCloud = memo(IconCloud);
 
 const IconCloudWrapper = ({ iconSlugs }) => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -7,7 +9,7 @@ const IconCloudWrapper = ({ iconSlugs }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoaded(true);
-    }, 1000);
+    }, 700); // Adjust the delay as needed
 
     return () => clearTimeout(timer);
   }, []);
@@ -17,10 +19,11 @@ const IconCloudWrapper = ({ iconSlugs }) => {
       <div
         className={`transition duration-500 ${isLoaded ? 'blur-0' : 'blur-sm'}`}
       >
-        <IconCloud iconSlugs={iconSlugs} />
+        <MemoizedIconCloud iconSlugs={iconSlugs} />
       </div>
       {!isLoaded && (
         <div className="absolute inset-0 flex items-center justify-center">
+          {/* Loading Spinner */}
           <svg
             className="animate-spin h-8 w-8 text-gray-500"
             xmlns="http://www.w3.org/2000/svg"
