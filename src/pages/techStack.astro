@@ -2,14 +2,14 @@
 import Main from '../layouts/Main.astro';
 import NavCards from '../components/UI/NavCards.astro';
 import TechStackHero from '../components/TechStack/TechHero.astro';
-import IconCloud from '../../@/components/magicui/icon-cloud.jsx';
+import IconCloudWrapper from '../components/TechStack/IconCloudWrapper';
 ---
 
 <Main title="Tech Stack">
   <NavCards />
   <TechStackHero />
   <div class="animate">
-    <IconCloud
+    <IconCloudWrapper
       iconSlugs={[
         'react',
         'astro',
@@ -29,7 +29,6 @@ import IconCloud from '../../@/components/magicui/icon-cloud.jsx';
         'github',
         'gitlab',
         'bitbucket',
-        'vscode',
         'figma',
         'adobephotoshop',
         'netlify',

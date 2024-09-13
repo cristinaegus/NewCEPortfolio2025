@@ -19,6 +19,7 @@ module.exports = {
       // ... rest of the letter spacings
     },
     extend: {
+      filter: ['responsive', 'hover', 'focus'],
       colors: {
         // Define your colors
         'background-light': '#f8fafc',
@@ -37,6 +38,7 @@ module.exports = {
   },
   plugins: [
     require('tailwindcss-animate'),
+    require('tailwindcss-filters'),
     function ({ addBase, theme }) {
       addBase({
         ':root': {
