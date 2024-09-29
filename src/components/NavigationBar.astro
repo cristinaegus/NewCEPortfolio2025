@@ -2,10 +2,11 @@
 const links = [
   { href: '/', label: 'Home' },
   { href: '/contactMe', label: 'Contact Me' },
+  { href: '/Ibrahim Elkamali Resume.pdf', label: 'Download my CV' },
 ];
 
 const { pathname } = Astro.url;
-const isActive = (href: string) =>
+const isActive = href =>
   href === pathname || href === pathname.replace(/\/$/, '');
 ---
 
@@ -16,8 +17,14 @@ const isActive = (href: string) =>
         <li class="opacity-80 list-none text-[0.95rem]">
           <a
             href={href}
+            download={
+              label === 'Download my CV'
+                ? 'Ibrahim Elkamali Resume.pdf'
+                : undefined
+            }
             class={[
               isActive(href) ? 'active-link' : '',
+              label === 'Download my CV' ? 'shimmer-button' : '',
               'px-4 py-2 rounded-lg no-underline text-grey-400 hover:text-grey-900',
             ].join(' ')}
           >

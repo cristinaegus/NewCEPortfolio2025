@@ -33,6 +33,7 @@ module.exports = {
         'grey-900-light': '#111111',
         'grey-900-dark': '#fafafa',
         rose: '#e11d48',
+        purple: '#6a0dad', // Added purple color
       },
     },
   },
@@ -48,6 +49,7 @@ module.exports = {
           '--grey-600': theme('colors.grey-600-light'),
           '--grey-900': theme('colors.grey-900-light'),
           '--clr-rose': theme('colors.rose'),
+          '--clr-purple': theme('colors.purple'), // Added custom purple variable
         },
         '.dark': {
           '--background': theme('colors.background-dark'),
@@ -56,6 +58,7 @@ module.exports = {
           '--grey-600': theme('colors.grey-600-dark'),
           '--grey-900': theme('colors.grey-900-dark'),
           '--clr-rose': theme('colors.rose'),
+          '--clr-purple': theme('colors.purple'), // Added custom purple variable for dark mode
         },
         body: {
           fontFamily: "'Inter', sans-serif",

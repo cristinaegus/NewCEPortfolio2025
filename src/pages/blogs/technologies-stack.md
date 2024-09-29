@@ -5,42 +5,42 @@ subtitle: 'Front-End Web Development'
 poster: '/images/roadmap.jpg'
 ---
 
-# Technologies and Libraries I’ve Worked With
+# Technologies and Libraries I’ve Worked With 🚀
 
-Here's a quick overview of the key technologies, libraries, and tools that form the core of my front-end development toolkit:
+Here’s a fun snapshot of the technologies and tools that power my development journey:
 
-## 1. **Astro**
+## 1. **Astro** 🪐
 
-Astro is a modern static site builder that emphasizes performance and developer experience. It allows me to create fast, optimized websites using frameworks like React and Svelte.
+Modern static site builder that makes my websites fast and efficient!
 
-## 2. **React**
+## 2. **React** ⚛️
 
-React is a powerful library for building dynamic and responsive user interfaces. Its component-based architecture promotes modular and maintainable code.
+The dynamic library for building interactive and responsive UIs.
 
-## 3. **JavaScript & TypeScript**
+## 3. **JavaScript & TypeScript** 📝
 
-JavaScript powers interactive web elements, while TypeScript adds type safety, helping catch errors early and manage large codebases effectively.
+JavaScript for interactive magic, with TypeScript for added type safety and catching bugs early.
 
-## 4. **Three.js**
+## 4. **Three.js** 🌐
 
-Three.js is used for creating animated 3D graphics in the browser, enhancing user experience with visually stunning elements.
+Bringing the web to life with stunning 3D graphics.
 
-## 5. **GSAP**
+## 5. **GSAP** 🎨
 
-GSAP is a robust library for high-performance animations, bringing projects to life with smooth, professional-grade animations.
+Professional-grade animations that make everything smooth and dynamic.
 
-## 6. **Core-js**
+## 6. **Core-js** 🧰
 
-Core-js provides polyfills for ECMAScript features, ensuring code compatibility across different environments and browsers.
+Polyfills for ECMAScript features to ensure compatibility across all browsers.
 
-## 7. **Vite, Parcel & Webpack**
+## 7. **Vite, Parcel & Webpack** 📦
 
-These are tools for bundling and building JavaScript applications, each offering unique advantages like fast development experiences, zero-configuration builds, and comprehensive module bundling.
+Tools that bundle and build my apps quickly and efficiently.
 
-## 8. **PostCSS, Sass, SCSS & Less**
+## 8. **PostCSS, Sass, SCSS & Less** 🎨
 
-These CSS preprocessors and tools extend CSS capabilities with variables, nesting, and mixins, allowing for cleaner and more maintainable stylesheets.
+Powerful CSS preprocessors that make writing and maintaining styles a breeze.
 
-## 9. **Basic Knowledge of PHP and C**
+## 9. **Basic Knowledge of PHP & C** 💻
 
-In addition to front-end expertise, I have basic knowledge of PHP for server-side scripting and C for foundational programming concepts and performance-critical applications.
+While I focus on front-end development, I’ve dabbled in PHP and C for server-side and low-level programming.

@@ -1,75 +1,64 @@
-<div id="blogPostIframeContainer" class="hidden">
-  <iframe id="blogPostIframe" src="https://giphy.com/embed/kjDQ00nkmCrCezmje0"
-  ></iframe>
-</div>
-
-<div id="resumeIframeContainer" class="hidden">
-  <iframe id="resumeIframe" src="https://giphy.com/embed/BkIWP8ZiXzo3cR6oS0"
-  ></iframe>
-</div>
+---
+const resumeLink = 'Ibrahim Elkamali Resume.pdf'; // Link to your CV
+const blogPostLink = '/blogs/technologies-stack'; // Link to your blog post
+---
 
 <p class="mt-5 animate">
   Here are the technologies I specialize in! This is just a glimpse of my
-  expertise. For a detailed overview, feel free to check out <a
-    href="#"
-    id="resumeLink"
-    class="underline font-bold text-rose-custom uppercase underline-offset-4"
-    >my resume</a
-  > (in progress) or explore my <a
-    class="underline font-bold text-purple-600 uppercase underline-offset-4"
-    href="/blogs/technologies-stack"
-    id="blogPostLink">blog post</a
-  >
-  about my Front-end development journey.
+  expertise. <br />
+  <strong> For a detailed overview, feel free to check out my resume. </strong>
 </p>
 
+<div class="mt-4 flex gap-4 animate">
+  <a href={resumeLink} target="_blank" class="btn btn-download">Download CV</a>
+
+  <!-- <a href={blogPostLink} target="_blank" class="btn btn-blog">View Blog Post</a> -->
+</div>
+
 <style>
-  <style > .grid-container {
+  .grid-container {
     width: 100%;
     height: 500px;
   }
-  #resumeIframeContainer,
-  #blogPostIframeContainer {
-    position: absolute;
-    pointer-events: none; /* Ignore mouse events */
-    z-index: 1000;
+
+  .btn {
+    @apply inline-block font-bold no-underline px-4 py-2 rounded-md shadow-lg transition-transform duration-300 ease-in-out;
+    color: white;
   }
 
-  #resumeIframe,
-  #blogPostIframe {
-    width: 400px;
-    height: 300px;
+  .btn-download {
+    background-color: var(--clr-rose);
+    box-shadow:
+      0 10px 20px rgba(225, 29, 72, 0.5),
+      0 6px 6px rgba(225, 29, 72, 0.5),
+      0 0 100px -10px var(--clr-rose);
+  }
+
+  .btn-download:hover {
+    transform: translateY(-3px);
+    box-shadow:
+      0 14px 28px rgba(225, 29, 72, 0.25),
+      0 10px 10px rgba(225, 29, 72, 0.22),
+      0 0 120px -10px var(--clr-rose);
+  }
+
+  .btn-blog {
+    background-color: var(--clr-purple);
+    box-shadow:
+      0 10px 20px rgba(106, 13, 173, 0.5),
+      0 6px 6px rgba(106, 13, 173, 0.5),
+      0 0 100px -10px var(--clr-purple);
+  }
+
+  .btn-blog:hover {
+    transform: translateY(-3px);
+    box-shadow:
+      0 14px 28px rgba(106, 13, 173, 0.25),
+      0 10px 10px rgba(106, 13, 173, 0.22),
+      0 0 120px -10px var(--clr-c);
+  }
+
+  .btn-blog {
+    color: white;
   }
 </style>
-
-<script>
-  setupIframeHover('resumeLink', 'resumeIframeContainer');
-  setupIframeHover('blogPostLink', 'blogPostIframeContainer');
-
-  function setupIframeHover(linkId: string, containerId: string) {
-    const link = document.getElementById(linkId) as HTMLAnchorElement;
-    const container = document.getElementById(containerId) as HTMLDivElement;
-
-    link.addEventListener('mouseenter', (event: MouseEvent) => {
-      container.classList.remove('hidden');
-      positionIframe(event, container);
-    });
-
-    link.addEventListener('mousemove', (event: MouseEvent) => {
-      positionIframe(event, container);
-    });
-
-    link.addEventListener('mouseleave', () => {
-      container.classList.add('hidden');
-    });
-  }
-
-  function positionIframe(event: MouseEvent, container: HTMLDivElement) {
-    const offset = 10;
-    const x = event.clientX + offset;
-    const y = event.clientY + offset;
-
-    container.style.left = `${x}px`;
-    container.style.top = `${y}px`;
-  }
-</script>
