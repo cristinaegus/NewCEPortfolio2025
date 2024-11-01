@@ -1,3 +1,8 @@
+export interface NavLink {
+  href: string;
+  label: string;
+}
+
 export interface Card {
   id: number;
   name: string;
@@ -12,11 +17,19 @@ export interface ProjectCard {
   href: string;
   imgSrc: string;
   imgAlt: string;
+  techColors?: Record<string, string>;
 }
 
-export interface NavCard {
+export interface TechnologyStyle {
+  color: string;
+  background: string;
+  hover: string;
+}
+
+export interface SiteConfig {
   title: string;
-  gradientFrom: string;
-  gradientTo: string;
-  to: string;
+  description: string;
+  url: string;
+  author: string;
+  social: Record<string, string>;
 }

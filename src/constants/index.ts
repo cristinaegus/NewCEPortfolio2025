@@ -1,8 +1,9 @@
-// Create a constants file for configuration values
-export const SITE_CONFIG = {
+import type { SiteConfig } from '../types';
+
+export const SITE_CONFIG: SiteConfig = {
   title: "Ibrahim Elkamali's Portfolio",
   description:
-    'Showcasing my skills, projects, and experience in front-end web development.',
+    'Front-end web development portfolio showcasing skills and projects',
   url: 'https://www.ibrahimelkamali.com/',
   author: 'Ibrahim Elkamali',
   social: {
@@ -17,4 +18,11 @@ export const ANIMATION_CONFIG = {
   cardOffset: 10,
   scaleFactor: 0.06,
   flipInterval: 5000,
-};
+} as const;
+
+export const TECH_COLORS = {
+  React: { color: '#61DAFB', hover: '#4FA8CC' },
+  Astro: { color: '#FF5D01', hover: '#CC4A01' },
+  Tailwind: { color: '#38B2AC', hover: '#2C8F8A' },
+  // Add other tech colors...
+} as const;
