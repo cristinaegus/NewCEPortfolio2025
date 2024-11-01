@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 export interface NavLink {
   href: string;
   label: string;
 }
 
-=======
->>>>>>> 47cfc0121705570c2b413d3699ae3c051a788490
 export interface Card {
   id: number;
   name: string;
@@ -20,7 +17,6 @@ export interface ProjectCard {
   href: string;
   imgSrc: string;
   imgAlt: string;
-<<<<<<< HEAD
   techColors?: Record<string, string>;
 }
 
@@ -36,7 +32,6 @@ export interface SiteConfig {
   url: string;
   author: string;
   social: Record<string, string>;
-=======
 }
 
 export interface NavCard {
@@ -44,5 +39,4 @@ export interface NavCard {
   gradientFrom: string;
   gradientTo: string;
   to: string;
->>>>>>> 47cfc0121705570c2b413d3699ae3c051a788490
 }
