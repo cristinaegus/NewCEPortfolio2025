@@ -35,6 +35,35 @@ module.exports = {
         rose: '#e11d48',
         purple: '#6a0dad', // Added purple color
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            maxWidth: '65ch',
+            color: 'var(--tw-prose-body)',
+            lineHeight: '1.75',
+            h1: {
+              fontSize: '2.5rem',
+              marginBottom: '2rem',
+              fontWeight: '700',
+            },
+            h2: {
+              fontSize: '1.75rem',
+              marginTop: '2.5rem',
+              marginBottom: '1.25rem',
+              fontWeight: '600',
+            },
+            p: {
+              marginTop: '1.25rem',
+              marginBottom: '1.25rem',
+              lineHeight: '1.75',
+            },
+          },
+        },
+      },
+      spacing: {
+        18: '4.5rem',
+        22: '5.5rem',
+      },
     },
   },
   plugins: [
