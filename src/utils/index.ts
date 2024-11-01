@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { type ClassValue } from 'clsx';
 import { clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
@@ -32,4 +33,12 @@ export const animateFloating = (selector: string, options = {}) => {
       ...options,
     });
   });
+=======
+// Combine utility functions into a single export
+export const cn = (...inputs: any[]) => inputs.filter(Boolean).join(' ');
+
+export const renderCustomIcon = (icon: string) => {
+  // Basic icon rendering implementation
+  return icon;
+>>>>>>> 47cfc0121705570c2b413d3699ae3c051a788490
 };

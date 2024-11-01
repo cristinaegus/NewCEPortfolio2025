@@ -1,9 +1,17 @@
+<<<<<<< HEAD
 import type { SiteConfig } from '../types';
 
 export const SITE_CONFIG: SiteConfig = {
   title: "Ibrahim Elkamali's Portfolio",
   description:
     'Front-end web development portfolio showcasing skills and projects',
+=======
+// Create a constants file for configuration values
+export const SITE_CONFIG = {
+  title: "Ibrahim Elkamali's Portfolio",
+  description:
+    'Showcasing my skills, projects, and experience in front-end web development.',
+>>>>>>> 47cfc0121705570c2b413d3699ae3c051a788490
   url: 'https://www.ibrahimelkamali.com/',
   author: 'Ibrahim Elkamali',
   social: {
@@ -18,6 +26,7 @@ export const ANIMATION_CONFIG = {
   cardOffset: 10,
   scaleFactor: 0.06,
   flipInterval: 5000,
+<<<<<<< HEAD
 } as const;
 
 export const TECH_COLORS = {
@@ -26,3 +35,6 @@ export const TECH_COLORS = {
   Tailwind: { color: '#38B2AC', hover: '#2C8F8A' },
   // Add other tech colors...
 } as const;
+=======
+};
+>>>>>>> 47cfc0121705570c2b413d3699ae3c051a788490
