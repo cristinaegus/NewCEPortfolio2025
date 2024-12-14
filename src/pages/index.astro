@@ -2,11 +2,41 @@
 import Main from '../layouts/Main.astro';
 import NavCards from '../components/UI/NavCards.astro';
 import HomeHeader from '../components/Home/HomeHeader.astro';
-import RecentPosts from '../components/Home/RecentPosts.astro';
+import ProjectCard from '../components/Project/ProjectCard.astro';
+import Experiences from "../components/Experiences.astro"
+
+const combinedTechStyles = {
+  // Define the styles for each technology here
+  React: 'bg-blue-500',
+  HTML: 'bg-orange-500',
+  Javascript: 'bg-yellow-500',
+  CSS: 'bg-green-500',
+};
 ---
 
-<Main title="Ibrahim Elkamali">
+<Main title="Cristina Egusquiza Portfolio">
   <HomeHeader />
   <NavCards />
-  <RecentPosts />
+  <div class="mb-5"></div>
+  <div class="experiences bg-blue-500" ></div>
+    <h2>PICK OF MY PROJECTS</h2>
+  <div class="mb-5"></div>
+ </div>
+  <div class="animate">
+    <ProjectCard
+    title="Hamaiketako App"
+    description=" A web app to show you the  places in Bilbao to have best pintxos!"
+    technologies={['React', 'HTML', 'Javascript', 'CSS', ]}
+    href="https://hamaiketako.netlify.app/"
+    imgSrc="/images/screencapture-hamaiketako1.png"
+    imgAlt="haramiketako-netlify-app-2024-11-08-10_37_39"
+    techColors={combinedTechStyles}
+    imgStyle="object-fit: cover;"
+    />
+  </div>
+  <div class="mb-5"></div>
+  <div class="experiences">
+     <h2>WORK EXPERIENCES & STUDIES</h2>
+  </div>
+  <Experiences />
 </Main>

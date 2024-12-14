@@ -1,6 +1,6 @@
-## Check out my website at: [https://test-astro-portoflio.netlify.app/](https://elkamali.netlify.app)
 
-### Feel free to explore and let me know what you think!
+
+
 
 Technologies I used here: 
 

@@ -1,16 +1,15 @@
 import type { SiteConfig } from '../types';
 
 export const SITE_CONFIG: SiteConfig = {
-  title: "Ibrahim Elkamali's Portfolio",
+  title: "Cristina Egusquiza's Portfolio",
   description:
     'Front-end web development portfolio showcasing skills and projects',
-  url: 'https://www.ibrahimelkamali.com/',
-  author: 'Ibrahim Elkamali',
+  url: '',
+  author: 'Cristina Egusquiza',
   social: {
-    github: 'https://github.com/Marve10s',
-    telegram: 'https://t.me/TheCr1nge',
-    instagram: 'https://www.instagram.com/_just._.him_/',
-    upwork: 'https://www.upwork.com/freelancers/~010112495fc6870d30',
+    github: 'https://github.com/cristinaegus',
+    LinkedIn: 'https://www.linkedin.com/in/cristina-egusquiza-875a4134/',
+    email: 'mailto:egusquizacristina@gmail.com',
   },
 };
 

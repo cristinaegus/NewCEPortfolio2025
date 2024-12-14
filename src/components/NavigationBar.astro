@@ -2,7 +2,9 @@
 const links = [
   { href: '/', label: 'Home' },
   { href: '/contactMe', label: 'Contact Me' },
-  { href: '/Ibrahim Elkamali Resume.pdf', label: 'Download my CV' },
+  { href: '/CEcvENG2024.pdf', label: 'Download my CV' },
+  { href: 'https://www.linkedin.com/in/cristina-egusquiza-875a4134/', label: 'LinkedIn' },
+  { href: 'mailto:egusquizacristina@gmail.com', label: 'Email' },
 ];
 
 const { pathname } = Astro.url;
@@ -17,11 +19,6 @@ const isActive = href =>
         <li class="opacity-80 list-none text-[0.95rem]">
           <a
             href={href}
-            download={
-              label === 'Download my CV'
-                ? 'Ibrahim Elkamali Resume.pdf'
-                : undefined
-            }
             class={[
               isActive(href) ? 'active-link' : '',
               label === 'Download my CV' ? 'shimmer-button' : '',

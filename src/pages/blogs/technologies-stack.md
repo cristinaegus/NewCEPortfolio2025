@@ -43,4 +43,19 @@ Powerful CSS preprocessors that make writing and maintaining styles a breeze.
 
 ## 9. **Basic Knowledge of PHP & C** 💻
 
-While I focus on front-end development, I’ve dabbled in PHP and C for server-side and low-level programming.
+
+
+## 10.  MySQL and MongoDB 
+Database related  Technologies
+
+## Technologies Stack
+
+* **React**: A JavaScript library for building user interfaces
+* **HTML**: HyperText Markup Language for structuring content
+* **CSS**: Cascading Style Sheets for styling content
+* **JavaScript**: A programming language for adding interactivity
+* **Python**: A high-level programming language for data analysis, machine learning, and web development
+
+I have been working with this technology in a program of the Bottega University
+Here is my certificate of the Full Stack Program (2023 -2024)
+

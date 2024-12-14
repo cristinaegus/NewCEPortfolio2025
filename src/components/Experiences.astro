@@ -1,0 +1,40 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCE = [
+{
+    date: "2023-2024",
+    title: "Full Stack Program",
+    company: "Bottega University",
+    description:
+      "Studied Frontend and Backend languages and technologies in a practical and advanced way. ",
+
+    
+  },
+  {
+    date: "2019-2021",
+    title: "Consultant",
+    company: "Bufete Otegui & Asociados S.L. (Bilbao)",
+    description:
+      "Create a DataBase for company clients teach the employees the use if the database.",
+
+    
+  },
+  {
+    date: "2001-2017",
+    title: "Project Manager",
+    company: "Arum Estrategias Interacionalización S.L.(Madrid)",
+    description:
+      "Responsable for the development of marketing strategies to support Spanish companies in their international expansions. Build and manage the company website",
+  },
+]
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
