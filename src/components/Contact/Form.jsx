@@ -47,7 +47,7 @@ const FormComponent = () => {
       method="POST"
       data-netlify="true"
       data-netlify-recaptcha="true"
-      netlify
+      netlify="true"
     >
       <input type="hidden" name="form-name" value="contact" />
       <h2 className="text-xl sm:text-2xl text-white mb-6 text-center">
