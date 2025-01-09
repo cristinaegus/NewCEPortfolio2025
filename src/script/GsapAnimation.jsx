@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import gsap from 'gsap';
-
 const GsapAnimation = () => {
   useEffect(() => {
     // Animation for elements with class 'animate'
@@ -11,7 +10,6 @@ const GsapAnimation = () => {
       stagger: 0.2,
       ease: 'power2.out',
     });
-
     // Animation for elements with class 'floating-span'
     const spans = document.querySelectorAll('.floating-span');
     spans.forEach(span => {
@@ -23,7 +21,6 @@ const GsapAnimation = () => {
         yoyo: true,
       });
     });
-
     // Animation for elements with class 'animated-text'
     gsap.to('.animated-text', {
       opacity: 1,
@@ -32,8 +29,6 @@ const GsapAnimation = () => {
       ease: 'power2.out',
     });
   }, []);
-
   return null;
 };
-
 export default GsapAnimation;
