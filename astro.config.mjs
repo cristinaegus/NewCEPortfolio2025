@@ -9,5 +9,5 @@ export default defineConfig({
   prefetch: {
     prefetchAll: true,
   },
-  site: 'https://elkamali.netlify.app',
+  site: 'https://crisegusportfolio2024.netlify.app/',
 });
