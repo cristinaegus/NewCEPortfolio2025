@@ -27,7 +27,7 @@ const GsapAnimation = () => {
       });
     }
 
-    const animatedText = document.querySelectorAll('.animated-text');
+    const animatedText = document.querySelectorAll('.animated');
     if (animatedText.length) {
       gsap.to(animatedText, {
         opacity: 1,

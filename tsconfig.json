@@ -3,5 +3,7 @@
   "compilerOptions": {
     "jsx": "react-jsx",
     "jsxImportSource": "react"
-  }
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.astro"],
+  "exclude": ["node_modules", "src/components/TechStack/LogoCircle.astro", "src/layouts/Layout.astro", "src/script/LogoCircle.astro"]
 }
