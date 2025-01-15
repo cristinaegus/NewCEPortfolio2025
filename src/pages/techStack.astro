@@ -2,41 +2,14 @@
 import Main from '../layouts/Main.astro';
 import NavCards from '../components/UI/NavCards.astro';
 import TechStackHero from '../components/TechStack/TechHero.astro';
-import IconCloudWrapper from '../components/TechStack/IconCloudWrapper';
+import TechStackAnimation from '../components/techStackAnimation.astro';
 ---
 
 <Main title="Tech Stack">
   <NavCards />
   <TechStackHero />
   <div class="animate">
-    <IconCloudWrapper
-      iconSlugs={[
-        'react',
-        'astro',
-        'tailwindcss',
-        'javascript',
-        'typescript',
-        'html5',
-        'css3',
-        'sass',
-        'bootstrap',
-        'materialui',
-        'webpack',
-        'babel',
-        'npm',
-        'git',
-        'gitlab',
-        'bitbucket',
-        'figma',
-        'adobephotoshop',
-        'netlify',
-        'docker',
-        'redux',
-        'eslint',
-        'prettier',
-        'framer',
-      ]}
-      client:load
-    />
+    <TechStackAnimation />
   </div>
+  
 </Main>

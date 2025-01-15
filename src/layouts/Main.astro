@@ -3,8 +3,9 @@ import '../styles/styles.css';
 import Footer from '../components/Footer.astro';
 import NavigationBar from '../components/NavigationBar.astro';
 import { ViewTransitions } from 'astro:transitions';
-import GsapAnimation from '../script/GsapAnimation';
-;
+
+
+
 
 type Props = {
   title: string;
@@ -60,7 +61,7 @@ const logos = [
         <Footer />
       </div>
     </main>
-    <GsapAnimation client:load />
-   
+    
+    
   </body>
 </html>

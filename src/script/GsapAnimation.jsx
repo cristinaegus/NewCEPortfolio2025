@@ -6,7 +6,7 @@ const GsapAnimation = () => {
     const animateElements = document.querySelectorAll('.animate');
     if (animateElements.length) {
       gsap.from(animateElements, {
-        opacity: 0,
+        opacity: 1,
         y: 20,
         duration: 1,
         stagger: 0.2,

@@ -21,7 +21,6 @@
     "clsx": "^2.1.1",
     "framer-motion": "^11.5.4",
     "gsap": "^3.12.5",
-    "latest": "^0.2.0",
     "lucide-react": "^0.440.0",
     "next-themes": "^0.3.0",
     "personal-website": "file:",
@@ -34,6 +33,7 @@
     "tailwindcss": "^3.4.4",
     "tailwindcss-animate": "^1.0.7",
     "tailwindcss-filters": "^3.0.0",
+    "tech-stack-icons": "^2.1.0",
     "typescript": "^5.4.5"
   },
   "devDependencies": {
