@@ -10,22 +10,24 @@ export const cloudProps = {
       justifyContent: 'center',
       alignItems: 'center',
       width: '100%',
+      maxWidth: 800,
+      minHeight: 350,
       paddingTop: 40,
     },
   },
   options: {
     reverse: true,
-    depth: 1,
+    depth: 1.7,
     wheelZoom: false,
-    imageScale: 2,
+    imageScale: 1.2,
     activeCursor: 'default',
     tooltip: 'native',
     initial: [0.1, -0.1],
     clickToFront: 500,
     tooltipDelay: 0,
     outlineColour: '#ffffff', // White outline for better contrast
-    maxSpeed: 0.04,
-    minSpeed: 0.02,
+    maxSpeed: 0.05,
+    minSpeed: 0.025,
   },
 };
 
@@ -39,7 +41,7 @@ export const renderCustomIcon = (icon, theme) => {
     bgHex,
     fallbackHex,
     minContrastRatio,
-    size: 42,
+    size: 30,
     aProps: {
       href: undefined,
       target: undefined,
