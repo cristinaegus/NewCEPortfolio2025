@@ -1,28 +1,40 @@
 ---
 import ProjectCard from './ProjectCard.astro';
 
-// Updated technology color mapping with background colors
+// Updated technology color mapping with modern, harmonious colors
 const techColors = {
-  React: 'text-[#61DAFB] bg-[#61DAFB]',
+  React: 'text-[#58C4DC] bg-[#58C4DC]',
   GSAP: 'text-[#88CE02] bg-[#88CE02]',
-  ThreeJS: 'text-[#000000] dark:text-white bg-white dark:bg-gray-800',
+  ThreeJS: 'text-[#6B7280] dark:text-[#9CA3AF] bg-[#6B7280] dark:bg-[#9CA3AF]',
   Tailwind: 'text-[#06B6D4] bg-[#06B6D4]',
-  Vite: 'text-[#FFD62E] bg-[#FFD62E]',
-  Javascript: 'text-[#F7DF1E] bg-[#F7DF1E]',
-  Sass: 'text-[#CC6699] bg-[#CC6699]',
-  Typescript: 'text-[#3178C6] bg-[#3178C6]',
+  Vite: 'text-[#9333EA] bg-[#9333EA]',
+  Javascript: 'text-[#F59E0B] bg-[#F59E0B]',
+  Sass: 'text-[#EC4899] bg-[#EC4899]',
+  Typescript: 'text-[#6366F1] bg-[#6366F1]',
+  Python: 'text-[#8B5CF6] bg-[#8B5CF6]',
+  Langchain: 'text-[#10B981] bg-[#10B981]',
+  NumPy: 'text-[#3B82F6] bg-[#3B82F6]',
+  CSS: 'text-[#06B6D4] bg-[#06B6D4]',
+  Astro: 'text-[#F97316] bg-[#F97316]',
+  Dockerfile: 'text-[#0EA5E9] bg-[#0EA5E9]',
 };
 
-// Add hover states for each technology
+// Add hover states for each technology with modern colors
 const hoverEffects = {
-  React: 'hover:ring-[#61DAFB]/50',
+  React: 'hover:ring-[#58C4DC]/50',
   GSAP: 'hover:ring-[#88CE02]/50',
-  ThreeJS: 'hover:ring-white/50',
-  Tailwind: 'hover:ring-[#38B2AC]/50',
-  Vite: 'hover:ring-[#646CFF]/50',
-  Javascript: 'hover:ring-[#F7DF1E]/50',
-  Sass: 'hover:ring-[#CC6699]/50',
-  Typescript: 'hover:ring-[#3178C6]/50',
+  ThreeJS: 'hover:ring-[#6B7280]/50 dark:hover:ring-[#9CA3AF]/50',
+  Tailwind: 'hover:ring-[#06B6D4]/50',
+  Vite: 'hover:ring-[#9333EA]/50',
+  Javascript: 'hover:ring-[#F59E0B]/50',
+  Sass: 'hover:ring-[#EC4899]/50',
+  Typescript: 'hover:ring-[#6366F1]/50',
+  Python: 'hover:ring-[#8B5CF6]/50',
+  Langchain: 'hover:ring-[#10B981]/50',
+  NumPy: 'hover:ring-[#3B82F6]/50',
+  CSS: 'hover:ring-[#06B6D4]/50',
+  Astro: 'hover:ring-[#F97316]/50',
+  Dockerfile: 'hover:ring-[#0EA5E9]/50',
 };
 
 // Combine the tech colors with hover effects
@@ -37,24 +49,22 @@ const combinedTechStyles = Object.fromEntries(
 <div class="grid gap-12 animate mt-8">
   <ProjectCard
     title="Wine Ai Web"
-    description=" A web app to recommend the best wines with an AI Sommelier!"
-    technologies={['Python', 'Langchain', 'NumPy', 'CSS', ]}
+    description="A web app to recommend the best wines with an AI Sommelier!"
+    technologies={['Python', 'Langchain', 'NumPy', 'CSS']}
     href="https://wine-ia-web.fly.dev/home"
-
-    imgSrc="/images/screencapture-wine-ia-web-fly-dev.JPG"
-
-    imgAlt="Project"
+    imgSrc="/images/screencapture-wine-ia-web-fly-dev-home-2025-10-23-11_15_39.jpg"
+    imgAlt="Wine AI Web Project"
     techColors={combinedTechStyles}
-   
   />
   <ProjectCard
+
     title="Hamaiketako App"
-    description=" An app to show you the  places in Bilbao to have best pintxos!"
+    description="An app to show you the places in Bilbao to have best pintxos!"
     technologies={['React', 'Javascript', 'CSS']}
     href="https://hamaiketako.netlify.app/"
     imgSrc="/images/screencapture-hamaiketako-small.png"
-    imgAlt="Project"
-    techColors={techColors}
+    imgAlt="Hamaiketako App Project"
+    techColors={combinedTechStyles}
   />
   <ProjectCard
     title="CEGUS Art Shop"
@@ -62,16 +72,16 @@ const combinedTechStyles = Object.fromEntries(
     technologies={['Javascript', 'Sass']}
     href="https://artshopcegus2025.netlify.app/"
     imgSrc="/images/ArtShopWebImage.jpg"
-    imgAlt="Project"
-    techColors={techColors}
+    imgAlt="CEGUS Art Shop Project"
+    techColors={combinedTechStyles}
   />
   <ProjectCard
-  title="MAMBO RECETAS"
-  description="App to show you the best recipes with MAMBO!"
-  technologies={['Javascript', 'Astro', 'Dockerfile']}
-  href="https://mamboapp.netlify.app/"
-  imgSrc="/images/screencapture-mamboapp-netlify-app.jpg"
-  imgAlt="mamboapp-netlify-app"
-  techColors={combinedTechStyles}
-/>
+    title="MAMBO RECETAS"
+    description="App to show you the best recipes with MAMBO!"
+    technologies={['Javascript', 'Astro', 'Dockerfile']}
+    href="https://mamboapp.netlify.app/"
+    imgSrc="/images/screencapture-mamboapp-netlify-app.jpg"
+    imgAlt="Mambo Recetas App Project"
+    techColors={combinedTechStyles}
+  />
 </div>

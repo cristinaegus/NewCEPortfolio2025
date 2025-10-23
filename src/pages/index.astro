@@ -6,11 +6,16 @@ import ProjectCard from '../components/Project/ProjectCard.astro';
 import Experiences from "../components/Experiences.astro"
 
 const combinedTechStyles = {
-  // Define the styles for each technology here
-  React: 'bg-blue-500',
-  HTML: 'bg-orange-500',
-  Javascript: 'bg-yellow-500',
-  CSS: 'bg-green-500',
+  // Updated modern, harmonious tech colors
+  React: 'text-[#58C4DC] bg-[#58C4DC]',
+  HTML5: 'text-[#F97316] bg-[#F97316]',
+  Javascript: 'text-[#F59E0B] bg-[#F59E0B]',
+  CSS3: 'text-[#06B6D4] bg-[#06B6D4]',
+  CSS: 'text-[#06B6D4] bg-[#06B6D4]',
+  Python: 'text-[#8B5CF6] bg-[#8B5CF6]',
+  Langchain: 'text-[#10B981] bg-[#10B981]',
+  Pandas: 'text-[#6366F1] bg-[#6366F1]',
+  NumPy: 'text-[#3B82F6] bg-[#3B82F6]',
 };
 ---
 
@@ -24,14 +29,13 @@ const combinedTechStyles = {
  </div>
   <div class="animate">
     <ProjectCard
-    title="Hamaiketako App"
-    description=" A web app to show you the  places in Bilbao to have best pintxos!"
-    technologies={['React', 'HTML', 'Javascript', 'CSS', ]}
-    href="https://hamaiketako.netlify.app/"
-    imgSrc="/images/screencapture-hamaiketako1.png"
-    imgAlt="haramiketako-netlify-app-2024-11-08-10_37_39"
-    techColors={combinedTechStyles}
-    imgStyle="object-fit: cover;"
+      title="Wine AI Web"
+      description="A web app to recommend the best wines with an AI Sommelier!"
+      technologies={['Python', 'Langchain', 'NumPy', 'CSS']}
+      href="https://wine-ia-web.fly.dev/home"
+      imgSrc="/images/screencapture-wine-ia-web-fly-dev-home-2025-10-23-11_15_39.jpg"
+      imgAlt="Wine AI Web - AI Sommelier Application"
+      techColors={combinedTechStyles}
     />
   </div>
   <div class="mb-5"></div>

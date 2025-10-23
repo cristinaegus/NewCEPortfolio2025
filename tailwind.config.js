@@ -22,19 +22,24 @@ module.exports = {
     extend: {
       filter: ['responsive', 'hover', 'focus'],
       colors: {
-        // Define your colors
-        'background-light': '#f8fafc',
-        'background-dark': '#18181b',
-        'grey-200-light': '#222222',
-        'grey-200-dark': '#eaeaea',
-        'grey-400-light': '#444444',
-        'grey-400-dark': '#acacac',
-        'grey-600-light': '#333333',
+        // Modern color palette with better contrast and harmony
+        'background-light': '#fafbfc',
+        'background-dark': '#0f1419',
+        'surface-light': '#ffffff',
+        'surface-dark': '#1a202c',
+        'grey-200-light': '#1a202c',
+        'grey-200-dark': '#f7fafc',
+        'grey-400-light': '#4a5568',
+        'grey-400-dark': '#cbd5e0',
+        'grey-600-light': '#2d3748',
         'grey-600-dark': '#ffffff',
-        'grey-900-light': '#111111',
-        'grey-900-dark': '#fafafa',
-        rose: '#e11d48',
-        purple: '#6a0dad', // Added purple color
+        'grey-900-light': '#171923',
+        'grey-900-dark': '#ffffff',
+        'accent-primary': '#6366f1', // Modern indigo
+        'accent-secondary': '#8b5cf6', // Modern purple
+        'accent-tertiary': '#06b6d4', // Modern cyan
+        rose: '#f43f5e',
+        purple: '#8b5cf6',
       },
       typography: {
         DEFAULT: {
@@ -73,21 +78,29 @@ module.exports = {
       addBase({
         ':root': {
           '--background': theme('colors.background-light'),
+          '--surface': theme('colors.surface-light'),
           '--grey-200': theme('colors.grey-200-light'),
           '--grey-400': theme('colors.grey-400-light'),
           '--grey-600': theme('colors.grey-600-light'),
           '--grey-900': theme('colors.grey-900-light'),
           '--clr-rose': theme('colors.rose'),
-          '--clr-purple': theme('colors.purple'), // Added custom purple variable
+          '--clr-purple': theme('colors.purple'),
+          '--clr-accent-primary': theme('colors.accent-primary'),
+          '--clr-accent-secondary': theme('colors.accent-secondary'),
+          '--clr-accent-tertiary': theme('colors.accent-tertiary'),
         },
         '.dark': {
           '--background': theme('colors.background-dark'),
+          '--surface': theme('colors.surface-dark'),
           '--grey-200': theme('colors.grey-200-dark'),
           '--grey-400': theme('colors.grey-400-dark'),
           '--grey-600': theme('colors.grey-600-dark'),
           '--grey-900': theme('colors.grey-900-dark'),
           '--clr-rose': theme('colors.rose'),
-          '--clr-purple': theme('colors.purple'), // Added custom purple variable for dark mode
+          '--clr-purple': theme('colors.purple'),
+          '--clr-accent-primary': theme('colors.accent-primary'),
+          '--clr-accent-secondary': theme('colors.accent-secondary'),
+          '--clr-accent-tertiary': theme('colors.accent-tertiary'),
         },
         body: {
           fontFamily: "'Inter', sans-serif",

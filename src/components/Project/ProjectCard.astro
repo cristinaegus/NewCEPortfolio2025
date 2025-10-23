@@ -1,19 +1,17 @@
 ---
 const { title, description, technologies, href, imgSrc, imgAlt, techColors } =
   Astro.props;
-import { Image } from 'astro:assets';
 ---
 
 <div
   class="group relative rounded-xl overflow-hidden bg-white dark:bg-gray-800 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
 >
-  <div class="aspect-video overflow-hidden">
-    <Image
+  <div class="aspect-video overflow-hidden relative">
+    <img
       src={imgSrc}
       alt={imgAlt}
-      width={500}
-      height={300}
       class="object-cover w-full h-full transform transition-transform duration-500 group-hover:scale-110 filter grayscale group-hover:filter-none"
+      loading="lazy"
     />
   </div>
   <div class="p-8">
