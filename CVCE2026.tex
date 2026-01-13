@@ -1,0 +1,256 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure PDF is machine readable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\Huge \scshape Cristina Egusquiza} \\ \vspace{1pt}
+    Bilbao, Spain \\ \vspace{1pt}
+    \small \raisebox{-0.1\height}\faPhone\ +34-699-253-730 ~ 
+    \href{mailto:egusquizacristina@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{egusquizacristina@gmail.com}} ~ 
+    \href{https://www.linkedin.com/in/cristina-egusquiza-875a4134/}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/cristina-egusquiza}}  ~
+    \href{https://github.com/cristinaegus}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/cristinaegus}} ~
+    \href{https://ceportfolio2025.netlify.app/}{\raisebox{-0.2\height}\faGlobe\ \underline{ceportfolio2025.netlify.app}}
+    \vspace{-8pt}
+\end{center}
+
+%-----------SUMMARY-----------
+\section{Professional Summary}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+    Certified Full Stack Web Developer with expertise in modern frontend and backend technologies. Experienced in AI/ML implementation, web development, and data analysis. Strong background in international business and project management with proven ability to deliver scalable web applications and AI-powered solutions.
+    }}
+ \end{itemize}
+ \vspace{-16pt}
+
+%-----------EXPERIENCE-----------
+\section{Work Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Data Analyst \& AI Developer Intern}{Sep 2025}
+      {Veltis Rating}{Bilbao, Spain}
+      \resumeItemListStart
+        \resumeItem{Developed AI models using Python for real estate management optimization and comprehensive risk analysis}
+        \resumeItem{Utilized tools including VS Code, Google Colab, and QGIS for geospatial analysis}
+        \resumeItem{Implemented solutions using pandas, numpy, scipy, scikit-learn, matplotlib, and seaborn}
+        \resumeItem{Created data visualization dashboards for real estate asset evaluation}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {IT Consultant}{2019 -- 2021}
+      {Bufete Otegui \& Asociados S.L.}{Bilbao, Spain}
+      \resumeItemListStart
+        \resumeItem{Designed and implemented client database systems for law firm operations}
+        \resumeItem{Provided comprehensive training to staff on database management}
+        \resumeItem{Established digital workflow improvements to enhance operational efficiency}
+        \resumeItem{Managed IT infrastructure and technical support for legal professionals}
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {Project Manager - International Business}{2001 -- 2017}
+      {Arum Estrategias Internacionalización S.L.}{Madrid, Spain}
+      \resumeItemListStart
+        \resumeItem{Led development of marketing strategies supporting Spanish companies in international expansion}
+        \resumeItem{Built and managed company website using modern web technologies}
+        \resumeItem{Coordinated cross-border business initiatives and strategic partnerships}
+        \resumeItem{Established business relationships in global markets across Europe, Latin America, and Asia}
+      \resumeItemListEnd
+    
+  \resumeSubHeadingListEnd
+\vspace{-16pt}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {AI and Web Development Program in Python}{Feb 2025 -- Aug 2025}
+      {C2B Campus to Business}{Bilbao, Spain}
+      \resumeItemListStart
+        \resumeItem{Comprehensive training in web application development and AI tools implementation}
+        \resumeItem{Focus on Machine Learning, Deep Learning, and Python programming}
+        \resumeItem{Expertise in modern development frameworks and AI integration}
+      \resumeItemListEnd
+    
+    \resumeSubheading
+      {Full Stack Web Development Certificate}{2023 -- 2024}
+      {Bottega University}{Online}
+      \resumeItemListStart
+        \resumeItem{Intensive hands-on training in frontend and backend technologies}
+        \resumeItem{Mastered JavaScript, React, Node.js, databases, and modern development workflows}
+        \resumeItem{Proficient in version control (Git) and deployment strategies}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+\vspace{-16pt}
+
+%-----------PROJECTS-----------
+\section{Featured Projects}
+    \vspace{-5pt}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Wine AI Web} $|$ \emph{Python, Langchain, NumPy, CSS}}{2025}
+          \resumeItemListStart
+            \resumeItem{Developed AI-powered sommelier web application for wine recommendations}
+            \resumeItem{Implemented natural language processing for wine pairing suggestions}
+            \resumeItem{Deployed on Fly.io: \href{https://wine-ia-web.fly.dev/home}{\underline{wine-ia-web.fly.dev}}}
+          \resumeItemListEnd
+          \vspace{-13pt}
+      \resumeProjectHeading
+          {\textbf{Hamaiketako App} $|$ \emph{React, JavaScript, CSS}}{2024}
+          \resumeItemListStart
+            \resumeItem{Created interactive web app showcasing best pintxos locations in Bilbao}
+            \resumeItem{Implemented responsive design and dynamic content rendering}
+            \resumeItem{Live at: \href{https://hamaiketako.netlify.app/}{\underline{hamaiketako.netlify.app}}}
+          \resumeItemListEnd 
+          \vspace{-13pt}
+      \resumeProjectHeading
+          {\textbf{CEGUS Art Shop} $|$ \emph{Astro, JavaScript, Sass}}{2025}
+          \resumeItemListStart
+            \resumeItem{Built modern e-commerce platform using Astro framework}
+            \resumeItem{Implemented advanced CSS preprocessing with Sass}
+            \resumeItem{Optimized for performance and SEO}
+          \resumeItemListEnd 
+          \vspace{-13pt}
+      \resumeProjectHeading
+          {\textbf{Personal Portfolio} $|$ \emph{Astro, React, TypeScript, Tailwind CSS, GSAP}}{2025}
+          \resumeItemListStart
+            \resumeItem{Designed and developed modern portfolio website with advanced animations}
+            \resumeItem{Integrated TypeScript for type safety and React for interactive components}
+            \resumeItem{Implemented GSAP for professional-grade animations}
+          \resumeItemListEnd 
+    \resumeSubHeadingListEnd
+\vspace{-15pt}
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: JavaScript, TypeScript, Python, HTML5, CSS3, SQL, PHP, C (basic)} \\
+     \textbf{Frontend}{: React, Astro, Vue, Tailwind CSS, Sass, SCSS, Less, Bootstrap, GSAP, Three.js, Framer Motion} \\
+     \textbf{Backend}{: Node.js, Django, Express.js, RESTful APIs} \\
+     \textbf{Databases}{: MySQL, MongoDB, PostgreSQL} \\
+     \textbf{AI/ML Libraries}{: Pandas, NumPy, scikit-learn, Langchain, TensorFlow (basic), scipy} \\
+     \textbf{Tools \& Technologies}{: Git, Docker, Vite, Webpack, Parcel, VS Code, Google Colab, QGIS, Figma} \\
+     \textbf{Deployment}{: Netlify, Fly.io, Vercel, Azure DevOps} \\
+     \textbf{Methodologies}{: Agile, Scrum, Test-Driven Development, CI/CD}
+    }}
+ \end{itemize}
+ \vspace{-16pt}
+
+%-----------LANGUAGES-----------
+\section{Languages}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Spanish}{: Native} \\
+     \textbf{English}{: Professional working proficiency} \\
+     \textbf{Basque}{: Basic}
+    }}
+ \end{itemize}
+ \vspace{-16pt}
+
+%-----------CERTIFICATIONS-----------
+\section{Certifications \& Achievements}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Full Stack Development Certificate} $|$ Bottega University}{2024}
+      \resumeProjectHeading
+          {\textbf{AI \& Web Development in Python} $|$ C2B Campus to Business}{2025}
+      \resumeProjectHeading
+          {\textbf{Upwork Reviews} $|$ Multiple 5/5 ratings for communication, problem-solving, and attention to detail}{}
+    \resumeSubHeadingListEnd
+
+\end{document}
